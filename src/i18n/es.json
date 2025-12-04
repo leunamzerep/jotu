@@ -22,6 +22,7 @@
     "footer": {
         "legals": "Documentos legales",
         "privacy": "Politica de Privacidad",
-        "terms": "Términos y Condiciones"
+        "terms": "Términos y Condiciones",
+        "mailRedirect": "https://mail.google.com/mail/?view=cm&fs=1&to=info@jotusolutions.net&su=Asesoria&body=Buen%20día,%20Quiero%20más%20información."
     }
 }

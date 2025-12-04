@@ -22,6 +22,7 @@
     "footer": {
         "legals": "Legals",
         "privacy": "Privacy Policy",
-        "terms": "Terms and Conditions"
+        "terms": "Terms and Conditions",
+        "mailRedirect": "https://mail.google.com/mail/?view=cm&fs=1&to=info@jotusolutions.net&su=Consulting&body=Hi,%20I%20want%20more.%20information."
     }
 }
