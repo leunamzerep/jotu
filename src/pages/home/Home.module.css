@@ -1,17 +1,14 @@
 .mainImg {
   width: 100%;
-  height: 150px;
+  height: 120px;
   object-fit: cover;
   object-position: 0% 27%;
   opacity: 0.75;
-  display: block;
 }
 
 .titleContainer {
   position: relative;
-  width: 100%;
-  height: 150px;
-  overflow: hidden;
+  height: 120px;
 }
 
 .mainTitle {
@@ -19,19 +16,97 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* perfect centering */
   margin: 0;
-  color: var(--btext);
-  font-size: 2rem;
-  /* adjust as needed */
+  color: var(--col2);
+  font-size: 32px;
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 30px;
+  width: 70%;
+}
+
+.infoContainer {
+  padding: 50px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  row-gap: 30px;
+}
+
+.item {
+  display: flex;
+  border-radius: 30px;
+  height: 275px;
+  width: 440px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.home1,
+.home2 {
+  height: 100%;
+  width: 45%;
+  object-fit: cover;
 }
 
 .home1 {
-  height: 200px;
+  object-position: 35%;
 }
 
 .home2 {
-  height: 200px;
+  object-position: 65% 0;
+}
+
+.textContainer1,
+.textContainer2 {
+  background-color: white;
+  height: calc(100% - 60px);
+  width: 55%;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.itemTitle {
+  color: var(--col3);
+  margin-top: 0;
+}
+
+.itemText {
+  color: var(--col2);
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (max-width:767px) {
+  .infoContainer {
+    grid-template-columns: 1fr;
+    padding: 40px 0px;
+  }
+
+  .item {
+    width: 80%;
+    height: 160px;
+    border-radius: 20px;
+  }
+
+  .itemTitle {
+    font-size: 14px;
+  }
+
+  .itemText {
+    font-size: 12px;
+  }
+
+  .titleContainer,
+  .mainImg {
+    height: 94px;
+  }
+
+  .mainTitle {
+    font-size: 20px;
+    width: 80%;
+  }
 }

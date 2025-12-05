@@ -24,5 +24,12 @@
         "privacy": "Politica de Privacidad",
         "terms": "Términos y Condiciones",
         "mailRedirect": "https://mail.google.com/mail/?view=cm&fs=1&to=info@jotusolutions.net&su=Asesoria&body=Buen%20día,%20Quiero%20más%20información."
+    },
+    "home": {
+        "main": "Soluciones Fiscalesy Empresariales en Estados Unidos",
+        "title1": "Creación de LLC en Estados Unidos",
+        "text1": "Asesoramos paso a paso la creación de LLC en Estados Unidos de manera personalizada.",
+        "title2": "Servicios de Contabilidad",
+        "text2": "Ayudamos a crear u organizar la contabilidad de su empresa."
     }
 }

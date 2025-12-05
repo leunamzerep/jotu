@@ -1,9 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import styles from './Home.module.css'
+import styles from './Home.module.css';
+
+import mainImg from "../../assets/img/mainImg.jpg";
+import home1 from "../../assets/img/home1.webp";
+import home2 from "../../assets/img/home2.jpg";
 
 export const Home = () => {
-
   const { t } = useTranslation();
 
   return (
@@ -16,23 +19,25 @@ export const Home = () => {
 
       <main className={styles.mainContainer}>
         <div className={styles.titleContainer}>
-          <img src="src/assets/img/mainImg.jpg" className={styles.mainImg} />
+          <img src={mainImg} className={styles.mainImg} />
           <h1 className={styles.mainTitle}>{t('home.main')}</h1>
         </div>
+
         <div className={styles.infoContainer}>
           <div className={styles.item}>
-            <img src="src/assets/img/home1.webp" className={styles.home1} />
-            <div className={styles.textContainer}>
+            <img src={home1} className={styles.home1} />
+            <div className={styles.textContainer1}>
               <h2 className={styles.itemTitle}>{t('home.title1')}</h2>
               <h3 className={styles.itemText}>{t('home.text1')}</h3>
             </div>
           </div>
+
           <div className={styles.item}>
-            <img src="src/assets/img/home2.jpg" className={styles.home2} />
-            <div className={styles.textContainer}>
+            <div className={styles.textContainer2}>
               <h2 className={styles.itemTitle}>{t('home.title2')}</h2>
               <h3 className={styles.itemText}>{t('home.text2')}</h3>
             </div>
+            <img src={home2} className={styles.home2} />
           </div>
         </div>
       </main>
