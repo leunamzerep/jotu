@@ -31,5 +31,12 @@
         "text1": "We provide personalized, step-by-step guidance for forming an LLC in the United States.",
         "title2": "Accounting Services",
         "text2": "We help create and organize your company’s accounting structure."
+    },
+    "card": {
+        "schedule": "Schedule your Consultation",
+        "contactUs": "Contact Us"
+    },
+    "about": {
+        "main": "Your Strategic Partner for Growing Your Business"
     }
 }

@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 
 import { Header } from "./header/Header";
 import { Home } from "./pages/home/Home";
-import { Services } from "./pages/services/Services";
+// import { Services } from "./pages/services/Services";
 import { AboutUs } from "./pages/aboutUs/AboutUs";
 import { Contact } from "./pages/contact/Contact";
 import { TermsAndConditions } from "./pages/terms/TermsAndConditions";
@@ -24,7 +24,7 @@ export const App = () => {
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-          <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
+          {/* <Route path="/services" element={<PageTransition><Services /></PageTransition>} /> */}
           <Route path="/about-us" element={<PageTransition><AboutUs /></PageTransition>} />
           <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
           <Route path="/terms-and-conditions" element={<PageTransition><TermsAndConditions /></PageTransition>} />

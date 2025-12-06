@@ -15,15 +15,15 @@
 .optionsContainer {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 20px;
 }
 
 .option {
-    padding: 8px 18px;
+    padding: 8px 20px;
     border-radius: 100px;
     border: none;
     background-color: white;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     text-decoration: none;
     color: var(--dtext);
@@ -51,8 +51,8 @@
     }
 
     .option {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 500;
-        padding: 5px 8px;
+        padding: 6px 10px;
     }
 }

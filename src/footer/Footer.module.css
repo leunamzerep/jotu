@@ -29,13 +29,14 @@
   font-weight: 500;
   text-decoration: none;
   color: var(--dtext);
-  transition: all 0.111s ease;
+  transition: all 0.2s ease;
 }
 
 .option:hover {
   text-decoration: underline;
   color: var(--col3);
-  transition: all 0.111s ease;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
 }
 
 .socialContainer {
@@ -64,11 +65,13 @@
   border-radius: 15px;
   color: white;
   text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 }
 
 .media:hover {
   background-color: var(--col4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
 }
 
@@ -97,14 +100,15 @@
 }
 
 .whatsappFloat:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+  transform: translateY(-3px);
   background-color: var(--col3);
   transition: all 0.3s ease;
 }
 
-
 @media (max-width: 767px) {
   .footer {
-    padding: 12px 7.5px 15px 15px;
+    padding: 18px 7.5px 23px 15px;
     justify-content: space-evenly;
     gap: 5px;
   }
@@ -118,7 +122,7 @@
   }
 
   .option {
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 500;
   }
 
@@ -143,7 +147,7 @@
   }
 
   .legalAdvice {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .whatsappFloat {

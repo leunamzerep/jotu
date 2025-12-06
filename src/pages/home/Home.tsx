@@ -9,11 +9,12 @@ import home1 from "../../assets/img/home1.webp";
 import home2 from "../../assets/img/home2.jpg";
 
 import styles from "./Home.module.css";
+import { SeoEntry } from "../../components/seoEntry/SeoEntry";
 
 export const Home = () => {
 
   const { t } = useTranslation();
-
+  const h1 = t("home.main")
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -31,11 +32,7 @@ export const Home = () => {
       </Helmet>
 
       <main className={styles.mainContainer}>
-        <div className={`${styles.titleContainer} ${animate ? styles.appear : ""}`}>
-          <img src={mainImg} className={styles.mainImg} />
-          <h1 className={styles.mainTitle}>{t("home.main")}</h1>
-        </div>
-
+        <SeoEntry imgPath={mainImg} content={h1} />
         <div className={styles.infoContainer}>
           <div className={`${styles.item} ${animate ? styles.enter : ""}`}>
             <img src={home1} className={styles.home1} />

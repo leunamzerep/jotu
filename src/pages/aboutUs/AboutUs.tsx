@@ -1,9 +1,17 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 
+import { SeoEntry } from "../../components/seoEntry/SeoEntry";
+import { ContactCard } from "../../components/contactCard/ContactCard";
+
+import aboutImg from "../../assets/img/aboutImg.jpg"
+import styles from './AboutUs.module.css'
+
+
 export const AboutUs = () => {
 
   const { t } = useTranslation();
+  const h1 = t("about.main")
 
   return (
     <>
@@ -14,7 +22,9 @@ export const AboutUs = () => {
       </Helmet>
 
       <main>
-        <h1>{t('header.aboutUs')}</h1>
+        <SeoEntry imgPath={aboutImg} content={h1} />
+        <h1 className={styles.p}>{t('header.aboutUs')}</h1>
+        <ContactCard />
       </main>
     </>
   );
