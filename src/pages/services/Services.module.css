@@ -46,9 +46,10 @@
   width: 440px;
   overflow: hidden;
   justify-content: center;
+
   opacity: 0;
   transform: translateX(0);
-  transition: transform 1200ms ease-in-out, opacity 1200ms ease-in;
+  transition: transform 1800ms ease, opacity 1800ms ease;
   will-change: transform, opacity;
 }
 
