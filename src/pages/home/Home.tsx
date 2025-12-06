@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 
+import { ContactCard } from "../../components/contactCard/ContactCard";
+
 import mainImg from "../../assets/img/mainImg.jpg";
 import home1 from "../../assets/img/home1.webp";
 import home2 from "../../assets/img/home2.jpg";
@@ -64,6 +66,7 @@ export const Home = () => {
             <img src={home2} className={styles.home2} />
           </div>
         </div>
+        <ContactCard />
       </main>
     </>
   );
