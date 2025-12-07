@@ -11,17 +11,19 @@ import home2 from "../../assets/img/home2.jpg";
 import styles from "./Home.module.css";
 import { SeoEntry } from "../../components/seoEntry/SeoEntry";
 
-export const Home = () => {
+type HomeProps = { canAnimate: boolean };
+
+export const Home = ({ canAnimate }: HomeProps) => {
 
   const { t } = useTranslation();
   const h1 = t("home.main")
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
+    if (!canAnimate) return;
     const id = requestAnimationFrame(() => setAnimate(true));
     return () => cancelAnimationFrame(id);
-  }, []);
-
+  }, [canAnimate]);
 
   return (
     <>
@@ -32,7 +34,7 @@ export const Home = () => {
       </Helmet>
 
       <main className={styles.mainContainer}>
-        <SeoEntry imgPath={mainImg} content={h1} />
+        <SeoEntry imgPath={mainImg} content={h1} canAnimate={canAnimate} />
         <div className={styles.infoContainer}>
           <div className={`${styles.item} ${animate ? styles.enter : ""}`}>
             <img src={home1} className={styles.home1} />
