@@ -30,7 +30,7 @@ export const Home = ({ canAnimate }: HomeProps) => {
       <Helmet>
         <title>{t("seo.homeTitle")}</title>
         <meta name="description" content={t("seo.homeDescription")} />
-        <link rel="canonical" href="https://jotusolutions.net" />
+        <link rel="canonical" href="https://zumiasolutions.xyz" />
       </Helmet>
 
       <main className={styles.mainContainer}>

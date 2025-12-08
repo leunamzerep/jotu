@@ -10,7 +10,7 @@ export const TermsAndConditions = () => {
       <Helmet>
         <title>{t('seo.termsTitle')}</title>
         <meta name="description" content={t('seo.termsDescription')} />
-        <link rel="canonical" href="https://jotusolutions.net" />
+        <link rel="canonical" href="https://zumiasolutions.xyz/terms-and-conditions" />
       </Helmet>
 
       <main>

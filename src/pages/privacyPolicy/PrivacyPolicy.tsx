@@ -10,7 +10,7 @@ export const PrivacyPolicy = () => {
       <Helmet>
         <title>{t('seo.privacyTitle')}</title>
         <meta name="description" content={t('seo.privacyDescription')} />
-        <link rel="canonical" href="https://jotusolutions.net" />
+        <link rel="canonical" href="https://zumiasolutions.xyz/privacy-policy" />
       </Helmet>
 
       <main>

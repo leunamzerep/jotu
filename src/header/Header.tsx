@@ -15,7 +15,6 @@ export const Header = () => {
         <img src={logo} className={styles.logo} />
         <div className={styles.optionsContainer}>
           <Link to="/" className={styles.option}>{t('header.home')}</Link>
-          {/* <Link to="/services" className={styles.option}>{t('header.services')}</Link> */}
           <Link to="/about-us" className={styles.option}>{t('header.aboutUs')}</Link>
           <Link to="/contact" className={styles.option}>{t('header.contact')}</Link>
         </div>

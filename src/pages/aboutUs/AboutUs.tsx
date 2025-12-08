@@ -21,7 +21,7 @@ export const AboutUs = ({ canAnimate }: AboutProps) => {
       <Helmet>
         <title>{t('seo.aboutUsTitle')}</title>
         <meta name="description" content={t('seo.aboutUsDescription')} />
-        <link rel="canonical" href="https://jotusolutions.net" />
+        <link rel="canonical" href="https://zumiasolutions.xyz/about-us" />
       </Helmet>
 
       <main>

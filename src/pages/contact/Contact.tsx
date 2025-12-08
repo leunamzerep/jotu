@@ -10,7 +10,7 @@ export const Contact = () => {
       <Helmet>
         <title>{t('seo.contactTitle')}</title>
         <meta name="description" content={t('seo.contactDescription')} />
-        <link rel="canonical" href="https://jotusolutions.net" />
+        <link rel="canonical" href="https://zumiasolutions.xyz/contact" />
       </Helmet>
 
       <main>
