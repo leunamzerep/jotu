@@ -7,8 +7,11 @@ import { ContactCard } from "../../components/contactCard/ContactCard";
 import aboutImg from "../../assets/img/aboutImg.jpg"
 import styles from './AboutUs.module.css'
 
+type AboutProps = {
+  canAnimate: boolean;
+}
 
-export const AboutUs = () => {
+export const AboutUs = ({ canAnimate }: AboutProps) => {
 
   const { t } = useTranslation();
   const h1 = t("about.main")
@@ -22,7 +25,7 @@ export const AboutUs = () => {
       </Helmet>
 
       <main>
-        <SeoEntry imgPath={aboutImg} content={h1} />
+        <SeoEntry imgPath={aboutImg} content={h1} canAnimate={canAnimate} />
         <h1 className={styles.p}>{t('header.aboutUs')}</h1>
         <ContactCard />
       </main>

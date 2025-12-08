@@ -26,7 +26,7 @@ const AnimatedRoutes = ({ canAnimate }: AppProps) => {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<PageTransition><Home canAnimate={canAnimate} /></PageTransition>} />
-        <Route path="/about-us" element={<PageTransition><AboutUs /></PageTransition>} />
+        <Route path="/about-us" element={<PageTransition><AboutUs canAnimate={canAnimate} /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
         <Route path="/terms-and-conditions" element={<PageTransition><TermsAndConditions /></PageTransition>} />
         <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
