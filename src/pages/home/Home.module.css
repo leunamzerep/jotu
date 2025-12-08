@@ -21,6 +21,7 @@
   will-change: transform, opacity;
 }
 
+
 .item:nth-child(odd) {
   transform: translateX(-200px);
 }
