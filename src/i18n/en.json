@@ -37,6 +37,12 @@
         "contactUs": "Contact Us"
     },
     "about": {
-        "main": "Your Strategic Partner for Growing Your Business"
+        "h1": "Your Strategic Partner for Growing Your Business",
+        "h21": "About Us",
+        "h31": "Our team of experts is dedicated to providing personalized support, ensuring that each process is completed efficiently and on time.",
+        "h22": "Our Services",
+        "h32": "At Jotu Solutions LLC, we offer comprehensive solutions in taxes and business formation in the United States.",
+        "h23": "Our Commitment",
+        "h33": "We are committed to helping our clients achieve their goals, whether in the business field in the United States or in planning an unforgettable trip to Canada. With us, you can have peace of mind knowing you will receive quality and reliable service."
     }
 }

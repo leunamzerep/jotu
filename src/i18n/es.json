@@ -37,6 +37,12 @@
         "contactUs": "Contáctanos"
     },
     "about": {
-        "main": "Tu Aliado Estratégico para hacer Crecer tu Negocio"
+        "h1": "Tu Aliado Estratégico para hacer Crecer tu Negocio",
+        "h21": "Sobre Nosotros",
+        "h31": "Nuestro equipo de expertos se dedica a proporcionar un acompañamiento personalizado, asegurando que cada trámite se realice de manera eficiente y oportuna.",
+        "h22": "Nuestros servicios",
+        "h32": "En Jotu Solutions LLC, ofrecemos soluciones integrales en impuestos y creación de empresas en Estados Unidos.",
+        "h23": "Nuestro compromiso",
+        "h33": "Estamos comprometidos a ayudar a nuestros clientes a alcanzar sus objetivos, ya sea en el ámbito empresarial en Estados Unidos o en la planificación de un viaje inolvidable a Canadá. Con nosotros, puede tener la tranquilidad de recibir un servicio de calidad y confiabilidad."
     }
 }
