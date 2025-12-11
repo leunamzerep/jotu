@@ -39,24 +39,28 @@ export const AboutUs = ({ canAnimate }: AboutProps) => {
       <main>
         <SeoEntry imgPath={aboutImg} content={h1} canAnimate={canAnimate} />
         <div>
-          <div>
-            <h2></h2>
-            <h3></h3>
+          <div className={styles.header}>
+            <h2 className={styles.mainTitle}>{t('about.h21')}</h2>
+            <h3 className={styles.mainText}>{t('about.h31')}</h3>
           </div>
           <div className={styles.infoContainer}>
             <div className={`${styles.item} ${animate ? styles.enter : ""}`} >
-              <div className={styles.textContainer}>
+              <div className={styles.titleContainer}>
                 <h2 className={styles.itemTitle}>{t("about.h22")}</h2>
-                <h3 className={styles.itemText}>{t("about.h32")}</h3>
               </div>
-              <img src={about1} className={styles.about1} />
+              <div className={styles.textContainer}>
+                <h3 className={styles.itemText}>{t("about.h32")}</h3>
+                <img src={about1} className={styles.about1} />
+              </div>
             </div>
             <div className={`${styles.item} ${animate ? styles.enter : ""}`} >
               <div className={styles.textContainer}>
-                <h2 className={styles.itemTitle}>{t("about.h23")}</h2>
                 <h3 className={styles.itemText}>{t("about.h33")}</h3>
+                <img src={about2} className={styles.about2} />
               </div>
-              <img src={about2} className={styles.about2} />
+              <div className={styles.titleContainer}>
+                <h2 className={styles.itemTitle}>{t("about.h23")}</h2>
+              </div>
             </div>
           </div>
         </div>
