@@ -8,10 +8,17 @@
   align-items: center;
   gap: 20px;
   padding: 25px 80px;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.appear {
+  opacity: 1;
+  transition: opacity 1.2s ease;
 }
 
 .mainTitle {
-  color: var(--col2);
+  color: var(--col3);
   margin: 0;
   font-size: 28px;
   text-align: center;
@@ -72,6 +79,7 @@
 .about2 {
   width: 100%;
   object-fit: cover;
+  filter: brightness(0.6);
 }
 
 .textContainer {
@@ -107,25 +115,56 @@
   text-align: center;
   margin: 0;
   width: 82%;
+  z-index: 1;
 }
 
 @media (max-width:767px) {
+
+  .header {
+    flex-direction: column;
+    padding: 15px 15px 20px 15px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    gap: 8px;
+  }
+
+  .mainTitle {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .mainText {
+    width: 100%;
+    font-size: 15px;
+  }
+
   .infoContainer {
     grid-template-columns: 1fr;
-    padding: 40px 0px;
+    padding: 20px 0px;
   }
 
   .item {
-    width: 80%;
+    width: 90%;
     height: 160px;
     border-radius: 20px;
   }
 
+  .titleContainer {
+    padding: 15px;
+    height: 130px;
+  }
+
+  .about1,
+  .about2 {
+    width: 100%;
+    height: auto;
+  }
+
   .itemTitle {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .itemText {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
