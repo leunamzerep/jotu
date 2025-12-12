@@ -8,8 +8,8 @@ export const ContactForm = () => {
 
   return (
     <section className={styles.displayContainer}>
-      <h2 className={styles.invitation}>{t('contact.invitation')}</h2>
       <form action="" className={styles.formContainer}>
+        <h2 className={styles.invitation}>{t('contact.invitation')}</h2>
         <label htmlFor="">
           <p className={styles.labelText}>{t('contact.label1')}</p>
           <p className={styles.labelWarn}>{t('contact.warn')}</p>
