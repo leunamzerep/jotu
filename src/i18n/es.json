@@ -44,5 +44,17 @@
         "h32": "En Jotu Solutions LLC, ofrecemos soluciones integrales en impuestos y creación de empresas en Estados Unidos.",
         "h23": "Nuestro compromiso",
         "h33": "Estamos comprometidos a ayudar a nuestros clientes a alcanzar sus objetivos. Con nosotros, puede tener la tranquilidad de recibir un servicio de calidad y confiabilidad."
+    },
+    "contact": {
+        "main": "Contáctanos. Solicita más información y trabajemos juntos",
+        "invitation": "Cuéntanos tus dudas o agenda tu asesoría",
+        "label1": "Nombre y Apellido",
+        "label2": "Correo Electrónico",
+        "label3": "Consulta",
+        "place1": "Escribe tu Nombre aquí",
+        "place2": "Escribe tu Email aquí",
+        "place3": "Escribe tu Consulta aquí",
+        "send": "Enviar",
+        "warn": "Campo Obligatorio"
     }
 }

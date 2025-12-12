@@ -44,5 +44,17 @@
         "h32": "At Jotu Solutions LLC, we offer comprehensive solutions in taxes and business formation in the United States.",
         "h23": "Our Commitment",
         "h33": "We are committed to helping our clients achieve their goals, whether in the business field in the United States or in planning an unforgettable trip to Canada. With us, you can have peace of mind knowing you will receive quality and reliable service."
+    },
+    "contact": {
+        "main": "Contact Us. Request more information and lets work together",
+        "invitation": "Ask for Help or Schedule your Consultation",
+        "label1": "Full Name",
+        "label2": "Email",
+        "label3": "Message",
+        "place1": "Write your Name here",
+        "place2": "Write your Email here",
+        "place3": "Write your Message here",
+        "send": "Send Mail",
+        "warn": "Mandatory Field"
     }
 }
