@@ -1,6 +1,7 @@
 .main {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
   padding: 30px 110px;
   justify-content: space-evenly;
   align-items: center;
@@ -16,7 +17,6 @@
   border-radius: 40px;
   box-shadow: 0 0 15px rgba(116, 156, 157, 0.75);
   gap: 10px;
-  width: 40%;
 }
 
 h2 {
@@ -47,4 +47,32 @@ h3,
 
 .appear {
   opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .main {
+    grid-template-columns: 1fr;
+    padding: 0px 15px;
+  }
+
+  .info {
+    margin: 0px 10px;
+    padding: 25px;
+    border-radius: 25px;
+    gap: 6px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3,
+  .inlineText {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .mapContainer {
+    padding: 30px 50px 20px 50px;
+  }
 }

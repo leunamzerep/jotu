@@ -68,7 +68,7 @@ export const Contact = ({ canAnimate }: ContactProps) => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
-            style={{ border: 0, borderRadius: "16px" }}
+            style={{ border: 0, borderRadius: "22px" }}
           />
         </div>
         <SeoEntry imgPath={mainImg} content={h1} canAnimate={canAnimate} />

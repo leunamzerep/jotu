@@ -47,6 +47,7 @@ textarea {
 .msgContainer {
   height: 60px;
   min-height: 60px;
+  max-height: 300px;
   font-family: var(--font);
   resize: vertical;
 }
@@ -63,16 +64,26 @@ textarea {
 }
 
 .labelWarn {
-  display: none;
+  opacity: 0;
+  color: red;
+  transition: opacity 0.2s ease;
 }
 
 .appear {
   opacity: 1;
 }
 
+.verification {
+  font-size: 14px;
+  margin-left: 10px;
+  color: var(--alt);
+  opacity: 0.8;
+}
+
 @media (max-width:767px) {
   .displayContainer {
-    padding: 30px;
+    padding: 20px 0;
+    justify-content: center;
   }
 
   .formContainer {
@@ -96,6 +107,7 @@ textarea {
   .msgContainer {
     height: 48px;
     min-height: 48px;
+    max-height: 250px;
   }
 
   .send {

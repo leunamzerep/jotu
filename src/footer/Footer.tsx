@@ -55,13 +55,13 @@ export const Footer = () => {
         <img src={logo} className={styles.logo} />
         <div className={styles.socialContainer}>
           <div className={styles.medias}>
-            <a className={styles.media} href="https://www.instagram.com/jotusolutions" target="_blank">
+            <a className={styles.media} style={{ backgroundColor: '#fea501' }} href="https://www.instagram.com/jotusolutions" target="_blank">
               <i className="fa-brands fa-instagram"></i>
             </a>
-            <a className={styles.media} href="https://www.facebook.com/people/JOTU-Solutions-LLC/61576996550658" target="_blank">
+            <a className={styles.media} style={{ backgroundColor: '#1970ff' }} href="https://www.facebook.com/people/JOTU-Solutions-LLC/61576996550658" target="_blank">
               <i className="fa-brands fa-facebook"></i>
             </a>
-            <a className={styles.media} href={mailLink} target="_blank">
+            <a className={styles.media} style={{ backgroundColor: '#e23f33' }} href={mailLink} target="_blank">
               <i className="fa-regular fa-envelope"></i>
             </a>
           </div>
