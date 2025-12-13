@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   padding: 40px 200px;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .formContainer {
@@ -16,25 +18,90 @@
 .invitation {
   color: var(--col2);
   font-size: 22px;
+  margin-top: -4px;
   margin: 0;
-  padding-bottom: 10px;
 }
 
 label {
   display: flex;
   flex-direction: row;
   gap: 6px;
-  padding: 4px;
+  padding: 0px;
 }
 
 label p {
   font-size: 14px;
-  margin-top: 10px;
+  margin: 24px 0 8px 0;
 }
 
-input {
+input,
+textarea {
   padding: 8px 10px;
   border-radius: 6px;
   font-size: 14px;
-  background-color: var(--col5);
+  background-color: var(--back2);
+  border: none;
+  box-shadow: 0 0 5px rgba(116, 156, 157, 0.5);
+}
+
+.msgContainer {
+  height: 60px;
+  min-height: 60px;
+  font-family: var(--font);
+  resize: vertical;
+}
+
+.send {
+  margin-top: 24px;
+  width: max-content;
+  font-size: 16px;
+  border: none;
+  color: white;
+  background-color: var(--col3);
+  padding: 6px 20px;
+  border-radius: 50px;
+}
+
+.labelWarn {
+  display: none;
+}
+
+.appear {
+  opacity: 1;
+}
+
+@media (max-width:767px) {
+  .displayContainer {
+    padding: 30px;
+  }
+
+  .formContainer {
+    width: 75%;
+  }
+
+  .invitation {
+    font-size: 19px;
+  }
+
+  label p {
+    font-size: 13px;
+    margin: 18px 0 6px 0;
+  }
+
+  input,
+  textarea {
+    font-size: 12px;
+  }
+
+  .msgContainer {
+    height: 48px;
+    min-height: 48px;
+  }
+
+  .send {
+    margin: 20px 0 -4px 0;
+    font-size: 12px;
+    padding: 5px 15px;
+    height: 30px;
+  }
 }

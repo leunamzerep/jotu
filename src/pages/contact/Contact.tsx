@@ -31,7 +31,7 @@ export const Contact = ({ canAnimate }: ContactProps) => {
 
       <main>
         <SeoEntry imgPath={mainImg} content={h1} canAnimate={canAnimate} />
-        <ContactForm />
+        <ContactForm canAnimate={canAnimate} />
         <p className={`${styles.prueba} ${animate ? styles.enter : ""}`}></p>
       </main>
     </>

@@ -65,6 +65,9 @@ export const Home = ({ canAnimate }: HomeProps) => {
             <img src={home2} className={styles.home2} />
           </div>
         </div>
+        {/* <div className={styles.fixPadding}>
+          <ContactForm />
+        </div> commented till knowing is seemed as usefull by owners */}
         <ContactCard />
       </main>
     </>

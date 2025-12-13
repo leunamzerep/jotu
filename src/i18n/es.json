@@ -55,6 +55,6 @@
         "place2": "Escribe tu Email aquí",
         "place3": "Escribe tu Consulta aquí",
         "send": "Enviar",
-        "warn": "Campo Obligatorio"
+        "warn": "Campo Obligatorio*"
     }
 }

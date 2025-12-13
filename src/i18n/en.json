@@ -55,6 +55,6 @@
         "place2": "Write your Email here",
         "place3": "Write your Message here",
         "send": "Send Mail",
-        "warn": "Mandatory Field"
+        "warn": "Mandatory Field*"
     }
 }
