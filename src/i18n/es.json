@@ -55,6 +55,17 @@
         "place2": "Escribe tu Email aquí",
         "place3": "Escribe tu Consulta aquí",
         "send": "Enviar",
-        "warn": "Campo Obligatorio*"
+        "warn": "Campo Obligatorio*",
+        "mail1": "Estimado/a",
+        "mail2": "Hemos recibido tu consulta:",
+        "mail3": "Gracias por contactarnos, -----",
+        "ubih21": "Ubicación",
+        "ubih31": "Nos encontramos ubicados en Estados Unidos, ofreciendo soluciones fiscales y trámites gubernamentales para la creación de empresas.",
+        "ubih22": "Dirección",
+        "ubih32": "2875 S Orange Ave Orlando, FL 32806",
+        "ubih23": "Horario de Atención",
+        "ubih33": "Lunes a Viernes 9 AM - 5 PM",
+        "ubih24": "¿Cómo llegar?",
+        "ubih34": "Siga el mapa a continuación o <1>haga click aquí</1>"
     }
 }

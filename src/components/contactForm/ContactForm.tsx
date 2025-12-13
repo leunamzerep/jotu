@@ -16,9 +16,47 @@ export const ContactForm = ({ canAnimate }: form) => {
     return () => cancelAnimationFrame(id);
   }, [canAnimate]);
 
+  const buildGmailLink = (to: string, subject: string, body: string) => {
+    const params = new URLSearchParams({
+      fs: "1", to, su: subject, body, tf: "cm"
+    });
+    return `https://mail.google.com/mail/u/0/?${params.toString()}`
+  }
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    const name = String(data.get("name") || "");
+    const email = String(data.get("email") || "");
+    const message = String(data.get("message") || "");
+    const dataURL = 'https://script.google.com/macros/s/AKfycbzoDYxqftQqah5uC0zWL6hwUrL-l_xTDF65w6G76QYDNEgrOj4HVQr4nIu_pxl3A6lv9g/exec'
+
+    const link = buildGmailLink(
+      `${email}`,
+      `${t('contact.label3')}`,
+      `${t('contact.mail1')} ${name}\n\n${t('contact.mail2')}\n\n"${message}"\n\n${t('contact.mail3')}`
+    );
+
+    data.append("formType", "contact");
+    data.append("link", link);
+
+    const res = await fetch(dataURL, {
+      method: "POST",
+      body: data,
+    });
+
+    const json = await res.json();
+    if (json.result !== "success") {
+      throw new Error(json.message || "Form submission failed");
+    }
+  };
+
   return (
     <section className={`${styles.displayContainer} ${animate ? styles.appear : ''}`}>
-      <form action="" className={styles.formContainer}>
+      <form onSubmit={onSubmit} className={styles.formContainer}>
         <h2 className={styles.invitation}>{t('contact.invitation')}</h2>
         <label htmlFor="name">
           <p className={styles.labelText}>{t('contact.label1')}</p>
@@ -29,13 +67,13 @@ export const ContactForm = ({ canAnimate }: form) => {
           <p className={styles.labelText}>{t('contact.label2')}</p>
           <p className={styles.labelWarn}>{t('contact.warn')}</p>
         </label>
-        <input id="mail" type="mail" autoComplete="mail" placeholder={t('contact.place2')} />
+        <input id="email" name="email" type="email" autoComplete="email" placeholder={t('contact.place2')} />
         <label htmlFor="mesagge">
           <p className={styles.labelText}>{t('contact.label3')}</p>
           <p className={styles.labelWarn}>{t('contact.warn')}</p>
         </label>
         <textarea id="mesagge" name="message" autoComplete="off" className={styles.msgContainer} placeholder={t('contact.place3')} />
-        <button className={styles.send}>{t('contact.send')}</button>
+        <button type="submit" className={styles.send}>{t('contact.send')}</button>
       </form>
     </section>
   )

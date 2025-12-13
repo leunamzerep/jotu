@@ -55,6 +55,17 @@
         "place2": "Write your Email here",
         "place3": "Write your Message here",
         "send": "Send Mail",
-        "warn": "Mandatory Field*"
+        "warn": "Mandatory Field*",
+        "mail1": "Dear",
+        "mail2": "We have received your inquiry:",
+        "mail3": "Thank you for contacting us, -----",
+        "ubih21": "Location",
+        "ubih31": "We are located in the United States, providing tax solutions and government services for business formation.",
+        "ubih22": "Address",
+        "ubih32": "2875 S Orange Ave, Orlando, FL 32806",
+        "ubih23": "Business Hours",
+        "ubih33": "Monday to Friday, 9:00 AM – 5:00 PM",
+        "ubih24": "How to get here?",
+        "ubih34": "Follow the map below or <1>click here</1>."
     }
 }
