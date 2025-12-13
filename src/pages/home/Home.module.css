@@ -79,6 +79,26 @@
   margin: 0;
 }
 
+.gridPosts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin: -10px 0 40px 0;
+  padding: 0 80px;
+}
+
+.post iframe {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+}
+
 @media (max-width:767px) {
   .infoContainer {
     grid-template-columns: 1fr;
@@ -97,5 +117,23 @@
 
   .itemText {
     font-size: 12px;
+  }
+
+  .post {
+    text-align: center;
+    padding: 0 40px;
+    gap: 25px;
+  }
+
+  .post h2 {
+    font-size: 20px;
+  }
+
+  .gridPosts {
+    grid-template-columns: 1fr;
+  }
+
+  .gridPosts iframe:not(:first-of-type) {
+    display: none;
   }
 }

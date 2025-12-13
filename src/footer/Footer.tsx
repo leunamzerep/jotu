@@ -65,7 +65,7 @@ export const Footer = () => {
               <i className="fa-regular fa-envelope"></i>
             </a>
           </div>
-          <p className={styles.legalAdvice}>© 2024. All rights reserved.</p>
+          <p className={styles.legalAdvice}>© 2025. All rights reserved.</p>
         </div>
       </div>
       <a href={whaLink} target="_blank" className={styles.whatsappFloat} style={{ bottom: `${buttonBottom}px` }}>

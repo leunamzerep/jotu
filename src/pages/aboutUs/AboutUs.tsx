@@ -34,6 +34,9 @@ export const AboutUs = ({ canAnimate }: AboutProps) => {
         <title>{t('seo.aboutUsTitle')}</title>
         <meta name="description" content={t('seo.aboutUsDescription')} />
         <link rel="canonical" href="https://zumiasolutions.xyz/about-us" />
+        <link rel="alternate" hrefLang="en" href="https://zumiasolutions.xyz/" />
+        <link rel="alternate" hrefLang="es" href="https://zumiasolutions.xyz/" />
+        <link rel="alternate" hrefLang="x-default" href="https://zumiasolutions.xyz/" />
       </Helmet>
 
       <main>
