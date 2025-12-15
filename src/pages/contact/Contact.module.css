@@ -17,13 +17,14 @@
   border-radius: 40px;
   box-shadow: 0 0 15px rgba(116, 156, 157, 0.75);
   gap: 10px;
+  filter: brightness(1.25);
 }
 
 h2 {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
-  color: var(--col3);
+  color: var(--col2);
 }
 
 h3,
@@ -31,7 +32,7 @@ h3,
   margin: 0 0 15px 0;
   font-size: 18px;
   font-weight: 600;
-  color: var(--col2);
+  color: var(--col1);
 }
 
 .inlineLink {
