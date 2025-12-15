@@ -156,12 +156,13 @@
 
   .about1,
   .about2 {
-    height: 100%;
-    width: auto;
+    width: 100%;
   }
 
   .itemTitle {
     font-size: 18px;
+    padding: 20px 0;
+
   }
 
   .itemText {
