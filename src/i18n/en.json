@@ -27,10 +27,18 @@
     },
     "home": {
         "main": "Fiscal and Business Solutions in the United States",
-        "title1": "LLC Formation in the United States",
-        "text1": "We provide personalized, step-by-step guidance for forming an LLC in the United States.",
-        "title2": "Accounting Services",
-        "text2": "We help create and organize your company’s accounting structure.",
+        "title1": "Business Formation & Registration",
+        "text1": "We guide you through the complete process of forming and registering your business in the United States.",
+        "title2": "Bookkeeping & Accounting Services",
+        "text2": "We keep your financial records organized and up to date to support clear business decisions.",
+        "title3": "Business Compliance & Filings",
+        "text3": "We manage required annual filings and compliance to keep your business in good standing.",
+        "title4": "Tax Preparation & Filing",
+        "text4": "We prepare and file accurate federal and state tax returns for individuals and businesses.",
+        "title5": "Sales Tax & Permits",
+        "text5": "We help you register, file, and manage sales tax obligations correctly and on time.",
+        "title6": "Payroll & Contractor Compliance",
+        "text6": "We handle payroll and contractor reporting to ensure accurate and timely compliance.",
         "invitation": "See our Latest News"
     },
     "card": {
@@ -38,13 +46,22 @@
         "contactUs": "Contact Us"
     },
     "about": {
+        "clients": "Brands trusting JoTu",
         "h1": "Your Strategic Partner for Growing Your Business",
         "h21": "About Us",
-        "h31": "Our team of experts is dedicated to providing personalized support, ensuring that each process is completed efficiently and on time.",
+        "h31": "Our team of experts provides personalized support to ensure each process is completed efficiently and on time.",
         "h22": "Our Services",
-        "h32": "At Jotu Solutions LLC, we offer comprehensive solutions in taxes and business formation in the United States.",
+        "h32": "At Jotu Solutions LLC, we provide comprehensive solutions for taxes, business formation, and compliance in the United States.",
         "h23": "Our Commitment",
-        "h33": "We are committed to helping our clients achieve their goals, whether in the business field in the United States or in planning an unforgettable trip to Canada. With us, you can have peace of mind knowing you will receive quality and reliable service."
+        "h33": "We are committed to delivering reliable service and clear guidance, so you can move forward with confidence and peace of mind.",
+        "h24": "Our Mission",
+        "h34": "We support entrepreneurs with clear tax, accounting, and compliance solutions, handling every step efficiently so you can focus on growth.",
+        "h25": "Our Vision",
+        "h35": "To be a trusted partner at every stage of your business, providing practical solutions that keep you compliant without complications.",
+        "h26": "Who We Are",
+        "h36": "We are a family-owned company, with over 10 years of experience in accounting and business compliance in the U.S.",
+        "h27": "Our Approach",
+        "h37": "We work closely with our clients to build long-term relationships based on trust, transparency, and personalized support."
     },
     "contact": {
         "main": "Contact Us. Request more information and lets work together",

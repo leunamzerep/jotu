@@ -9,6 +9,16 @@ import { ContactCard } from "../../components/contactCard/ContactCard";
 import aboutImg from "../../assets/img/aboutImg.jpg"
 import about1 from "../../assets/img/about1.jpg";
 import about2 from "../../assets/img/about2.jpg";
+import about3 from "../../assets/img/about3.avif";
+import about4 from "../../assets/img/about4.avif";
+import about5 from "../../assets/img/about5.avif";
+import about6 from "../../assets/img/about6.avif";
+import client1 from "../../assets/img/client1.png";
+import client2 from "../../assets/img/client2.png";
+import client3 from "../../assets/img/client3.png";
+import client4 from "../../assets/img/client4.png";
+import client5 from "../../assets/img/client5.png";
+import client6 from "../../assets/img/client6.png";
 import styles from './AboutUs.module.css'
 
 type AboutProps = {
@@ -67,22 +77,49 @@ export const AboutUs = ({ canAnimate }: AboutProps) => {
             </div>
             <div className={`${styles.item} ${animate ? styles.enter : ""}`} >
               <div className={styles.titleContainer}>
-                <h2 className={styles.itemTitle}>{t("about.h22")}</h2>
+                <h2 className={styles.itemTitle}>{t("about.h24")}</h2>
               </div>
               <div className={styles.textContainer}>
-                <h3 className={styles.itemText}>{t("about.h32")}</h3>
-                <img src={about1} className={styles.about1} />
+                <h3 className={styles.itemText}>{t("about.h34")}</h3>
+                <img src={about3} className={styles.about2} />
               </div>
             </div>
             <div className={`${styles.item} ${animate ? styles.enter : ""}`} >
               <div className={styles.textContainer}>
-                <h3 className={styles.itemText}>{t("about.h33")}</h3>
-                <img src={about2} className={styles.about2} />
+                <h3 className={styles.itemText}>{t("about.h35")}</h3>
+                <img src={about4} className={styles.about2} />
               </div>
               <div className={styles.titleContainer}>
-                <h2 className={styles.itemTitle}>{t("about.h23")}</h2>
+                <h2 className={styles.itemTitle}>{t("about.h25")}</h2>
               </div>
             </div>
+            <div className={`${styles.item} ${animate ? styles.enter : ""}`} >
+              <div className={styles.titleContainer}>
+                <h2 className={styles.itemTitle}>{t("about.h26")}</h2>
+              </div>
+              <div className={styles.textContainer}>
+                <h3 className={styles.itemText}>{t("about.h36")}</h3>
+                <img src={about5} className={styles.about2} />
+              </div>
+            </div>
+            <div className={`${styles.item} ${animate ? styles.enter : ""}`} >
+              <div className={styles.textContainer}>
+                <h3 className={styles.itemText}>{t("about.h37")}</h3>
+                <img src={about6} className={styles.about2} />
+              </div>
+              <div className={styles.titleContainer}>
+                <h2 className={styles.itemTitle}>{t("about.h27")}</h2>
+              </div>
+            </div>
+          </div>
+          <h2 className={styles.clients}>{t("about.clients")}</h2>
+          <div className={styles.clientsContainer}>
+            <img className={styles.client1} src={client1} />
+            <img className={styles.client2} src={client2} />
+            <img className={styles.client3} src={client3} />
+            <img className={styles.client4} src={client4} />
+            <img className={styles.client5} src={client5} />
+            <img className={styles.client6} src={client6} />
           </div>
         </div>
         <ContactCard />

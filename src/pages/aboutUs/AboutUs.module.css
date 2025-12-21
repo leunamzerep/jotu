@@ -124,6 +124,26 @@
   z-index: 1;
 }
 
+.clients {
+  text-align: center;
+}
+
+.clientsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 10px;
+  padding: 30px 100px;
+}
+
+.clientsContainer img {
+  width: 150px;
+  border-radius: 75px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
 @media (max-width:767px) {
 
   .header {
@@ -173,5 +193,20 @@
 
   .itemText {
     font-size: 14px;
+  }
+
+  .clientsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 20px 40px;
+  }
+
+  .clientsContainer img {
+    width: 90px;
+    border-radius: 45px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
   }
 }

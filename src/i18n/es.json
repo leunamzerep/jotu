@@ -27,10 +27,18 @@
     },
     "home": {
         "main": "Soluciones Fiscales y Empresariales en Estados Unidos",
-        "title1": "Creación de LLC en Estados Unidos",
-        "text1": "Asesoramos paso a paso la creación de LLC en Estados Unidos de manera personalizada.",
+        "title1": "Creación y Registro de Empresas LLC",
+        "text1": "Le guiamos en todo el proceso de creación y registro de su empresa en Estados Unidos.",
         "title2": "Servicios de Contabilidad",
-        "text2": "Ayudamos a crear u organizar la contabilidad de su empresa.",
+        "text2": "Mantenemos sus registros financieros organizados y actualizados para una mejor gestión.",
+        "title3": "Cumplimiento y Declaraciones",
+        "text3": "Gestionamos reportes anuales y requisitos legales para mantener su empresa en regla.",
+        "title4": "Preparación y Declaración de Impuestos",
+        "text4": "Preparamos y presentamos impuestos federales y estatales para personas y empresas.",
+        "title5": "Impuestos sobre Ventas y Permisos",
+        "text5": "Le ayudamos a registrar y cumplir correctamente con sus obligaciones de impuestos sobre ventas.",
+        "title6": "Nómina y Contratistas",
+        "text6": "Gestionamos la nómina y reportes de contratistas para un cumplimiento correcto y puntual.",
         "invitation": "Conoce las Últimas Novedades:"
     },
     "card": {
@@ -38,13 +46,22 @@
         "contactUs": "Contáctanos"
     },
     "about": {
+        "clients": "Marcas que confiaron en JoTu",
         "h1": "Tu Aliado Estratégico para hacer Crecer tu Negocio",
         "h21": "Sobre Nosotros",
         "h31": "Nuestro equipo de expertos se dedica a proporcionar un acompañamiento personalizado, asegurando que cada trámite se realice de manera eficiente y oportuna.",
         "h22": "Nuestros servicios",
         "h32": "En Jotu Solutions LLC, ofrecemos soluciones integrales en impuestos y creación de empresas en Estados Unidos.",
         "h23": "Nuestro compromiso",
-        "h33": "Estamos comprometidos a ayudar a nuestros clientes a alcanzar sus objetivos. Con nosotros, puede tener la tranquilidad de recibir un servicio de calidad y confiabilidad."
+        "h33": "Estamos comprometidos a ayudar a nuestros clientes a alcanzar sus objetivos. Con nosotros, puede tener la tranquilidad de recibir un servicio de calidad y confiabilidad.",
+        "h24": "Nuestra Misión",
+        "h34": "Apoyamos a emprendedores con soluciones claras en impuestos, contabilidad y cumplimiento, gestionando cada proceso de forma eficiente.",
+        "h25": "Nuestra Visión",
+        "h35": "Ser un socio confiable en cada etapa del negocio, ofreciendo soluciones prácticas que mantengan a nuestros clientes en cumplimiento sin complicaciones.",
+        "h26": "Quiénes Somos",
+        "h36": "Somos una empresa familiar, con más de 10 años de experiencia en contabilidad y cumplimiento empresarial en Estados Unidos.",
+        "h27": "Nuestro Enfoque",
+        "h37": "Trabajamos de la mano con nuestros clientes para construir relaciones duraderas basadas en confianza, transparencia y atención personalizada."
     },
     "contact": {
         "main": "Contáctanos. Solicita más información y trabajemos juntos",
