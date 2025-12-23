@@ -114,12 +114,24 @@ export const AboutUs = ({ canAnimate }: AboutProps) => {
           </div>
           <h2 className={styles.clients}>{t("about.clients")}</h2>
           <div className={styles.clientsContainer}>
-            <img className={styles.client1} src={client1} />
-            <img className={styles.client2} src={client2} />
-            <img className={styles.client3} src={client3} />
-            <img className={styles.client4} src={client4} />
-            <img className={styles.client5} src={client5} />
-            <img className={styles.client6} src={client6} />
+            <a className={`${styles.aContainer} ${styles.hasTooltip}`} data-label={`${t('about.from')} Huarike Peruvian Cuisine`} target="_blank" href="https://www.instagram.com/huarikeperuviancuisine?igsh=dWZtOWttZjBhZjBr">
+              <img className={styles.client1} src={client1} />
+            </a>
+            <a className={`${styles.aContainer} ${styles.hasTooltip}`} data-label={`${t('about.from')} Made Interiores`} target="_blank" href="https://www.instagram.com/madeinteriorsus?igsh=MW9sbHc5Y3FpaWt3dA==">
+              <img className={styles.client2} src={client2} />
+            </a>
+            <a className={`${styles.aContainer} ${styles.hasTooltip}`} data-label={`${t('about.from')} Corner Social`} target="_blank" href="https://www.instagram.com/cornersocial?igsh=MWNmOWl1Z2o0ZmJvZA==">
+              <img className={styles.client3} src={client3} />
+            </a>
+            <a className={`${styles.aContainer} ${styles.hasTooltip}`} data-label={`${t('about.from')} Curleys Bagels`} target="_blank" href="https://www.instagram.com/curleys_bagels?igsh=MWhiOXJod2lrNTkzNA==">
+              <img className={styles.client4} src={client4} />
+            </a>
+            <a className={`${styles.aContainer} ${styles.hasTooltip}`} data-label={`${t('about.from')} The Lowery Bar & Kitchen`} target="_blank" href="https://www.instagram.com/thelowerybar?igsh=cHl1N2g0N2RveDRo">
+              <img className={styles.client5} src={client5} />
+            </a>
+            <a className={`${styles.aContainer} ${styles.hasTooltip}`} data-label={`${t('about.from')} Elpis NYC`} target="_blank" href="https://www.instagram.com/elpisnyc?igsh=MWRhbGVmczJhY3p6cA==">
+              <img className={styles.client6} src={client6} />
+            </a>
           </div>
         </div>
         <ContactCard />

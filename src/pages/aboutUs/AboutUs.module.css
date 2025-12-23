@@ -127,6 +127,20 @@
 .clients {
   text-align: center;
   padding-top: 8px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.aContainer {
+  border-radius: 100px;
+  transition: all 0.5s ease;
+}
+
+.aContainer:hover {
+  text-decoration: underline;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(44, 66, 66, 0.99);
+  transition: all 0.5s ease;
 }
 
 .clientsContainer {
@@ -143,6 +157,32 @@
   display: block;
   object-fit: cover;
   object-position: center;
+}
+
+.hasTooltip {
+  position: relative;
+}
+
+.hasTooltip::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+
+.hasTooltip:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
 }
 
 @media (max-width:767px) {
