@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zumiasolutions.xyz/</loc>
+    <loc>https://jotusolutions.net/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://zumiasolutions.xyz/about-us</loc>
+    <loc>https://jotusolutions.net/about-us</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zumiasolutions.xyz/contact</loc>
+    <loc>https://jotusolutions.net/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zumiasolutions.xyz/terms-and-conditions</loc>
+    <loc>https://jotusolutions.net/terms-and-conditions</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zumiasolutions.xyz/privacy-policy</loc>
+    <loc>https://jotusolutions.net/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

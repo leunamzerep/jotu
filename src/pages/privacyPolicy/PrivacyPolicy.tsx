@@ -29,10 +29,10 @@ export const PrivacyPolicy = ({ canAnimate }: TermsProps) => {
       <Helmet>
         <title>{t('seo.privacyTitle')}</title>
         <meta name="description" content={t('seo.privacyDescription')} />
-        <link rel="canonical" href="https://zumiasolutions.xyz/privacy-policy" />
-        <link rel="alternate" hrefLang="en" href="https://zumiasolutions.xyz/" />
-        <link rel="alternate" hrefLang="es" href="https://zumiasolutions.xyz/" />
-        <link rel="alternate" hrefLang="x-default" href="https://zumiasolutions.xyz/" />
+        <link rel="canonical" href="https://jotusolutions.net/privacy-policy" />
+        <link rel="alternate" hrefLang="en" href="https://jotusolutions.net/" />
+        <link rel="alternate" hrefLang="es" href="https://jotusolutions.net/" />
+        <link rel="alternate" hrefLang="x-default" href="https://jotusolutions.net/" />
       </Helmet>
 
       <main>

@@ -26,10 +26,10 @@ export const Contact = ({ canAnimate }: ContactProps) => {
       <Helmet>
         <title>{t('seo.contactTitle')}</title>
         <meta name="description" content={t('seo.contactDescription')} />
-        <link rel="canonical" href="https://zumiasolutions.xyz/contact" />
-        <link rel="alternate" hrefLang="en" href="https://zumiasolutions.xyz/" />
-        <link rel="alternate" hrefLang="es" href="https://zumiasolutions.xyz/" />
-        <link rel="alternate" hrefLang="x-default" href="https://zumiasolutions.xyz/" />
+        <link rel="canonical" href="https://jotusolutions.net/contact" />
+        <link rel="alternate" hrefLang="en" href="https://jotusolutions.net/" />
+        <link rel="alternate" hrefLang="es" href="https://jotusolutions.net/" />
+        <link rel="alternate" hrefLang="x-default" href="https://jotusolutions.net/" />
       </Helmet>
 
       <main>
