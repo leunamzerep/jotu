@@ -41,8 +41,8 @@ export const App = () => {
                   onFinish={() => setShowSplash(false)}
                 />
               )}
-              <PrerenderReady />
               <Layout />
+              <PrerenderReady />
             </>
           ),
           children: createServerRoutes(canAnimate),
