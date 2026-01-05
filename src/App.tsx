@@ -2,6 +2,8 @@ import { AnimatePresence } from "framer-motion";
 import { useMemo, useState } from "react";
 import { RouterProvider, Outlet, createBrowserRouter } from "react-router-dom";
 
+import { PrerenderReady } from "./PrerenderReady";
+
 import { Header } from "./header/Header";
 import { Footer } from "./footer/Footer";
 import { SplashScreen } from "./components/splashScreen/SplashScreen";
@@ -20,8 +22,12 @@ const Layout = () => (
 );
 
 export const App = () => {
-  const [canAnimate, setCanAnimate] = useState(false);
-  const [showSplash, setShowSplash] = useState(true);
+  const isPrerender =
+    typeof window !== "undefined" &&
+    (window as any).__PRERENDER_INJECTED?.prerender === true;
+
+  const [canAnimate, setCanAnimate] = useState(isPrerender);
+  const [showSplash, setShowSplash] = useState(!isPrerender);
 
   const router = useMemo(
     () =>
@@ -35,6 +41,7 @@ export const App = () => {
                   onFinish={() => setShowSplash(false)}
                 />
               )}
+              <PrerenderReady />
               <Layout />
             </>
           ),
