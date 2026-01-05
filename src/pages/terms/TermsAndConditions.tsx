@@ -30,7 +30,6 @@ export const TermsAndConditions = ({ canAnimate }: TermsProps) => {
         <meta name="description" content={t('seo.termsDescription')} />
         <link rel="canonical" href="https://jotusolutions.net/terms-and-conditions" />
         <link rel="alternate" hrefLang="es" href="https://jotusolutions.net/" />
-        <link rel="alternate" hrefLang="en" href="https://jotusolutions.net/" />
         <link rel="alternate" hrefLang="x-default" href="https://jotusolutions.net/" />
       </Helmet>
 

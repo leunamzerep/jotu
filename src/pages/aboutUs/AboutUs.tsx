@@ -45,7 +45,6 @@ export const AboutUs = ({ canAnimate }: AboutProps) => {
         <meta name="description" content={t('seo.aboutUsDescription')} />
         <link rel="canonical" href="https://jotusolutions.net/about-us" />
         <link rel="alternate" hrefLang="es" href="https://jotusolutions.net/" />
-        <link rel="alternate" hrefLang="en" href="https://jotusolutions.net/" />
         <link rel="alternate" hrefLang="x-default" href="https://jotusolutions.net/" />
       </Helmet>
 

@@ -68,7 +68,6 @@ export const Home = ({ canAnimate }: HomeProps) => {
         <meta name="description" content={t("seo.homeDescription")} />
         <link rel="canonical" href="https://jotusolutions.net" />
         <link rel="alternate" hrefLang="es" href="https://jotusolutions.net/" />
-        <link rel="alternate" hrefLang="en" href="https://jotusolutions.net/" />
         <link rel="alternate" hrefLang="x-default" href="https://jotusolutions.net/" />
       </Helmet>
 

@@ -28,7 +28,6 @@ export const Contact = ({ canAnimate }: ContactProps) => {
         <meta name="description" content={t('seo.contactDescription')} />
         <link rel="canonical" href="https://jotusolutions.net/contact" />
         <link rel="alternate" hrefLang="es" href="https://jotusolutions.net/" />
-        <link rel="alternate" hrefLang="en" href="https://jotusolutions.net/" />
         <link rel="alternate" hrefLang="x-default" href="https://jotusolutions.net/" />
       </Helmet>
 
