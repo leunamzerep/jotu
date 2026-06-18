@@ -22,7 +22,7 @@ export const Home = ({ canAnimate }: HomeProps) => {
   const { t } = useTranslation();
   const h1 = t("home.main")
   const [animate, setAnimate] = useState(false);
-  const getUrl = 'https://script.google.com/macros/s/AKfycbx67xF67fqj8WyFOZSfkL1Po8PlRX7t0I_7AbngNT-inTEAVlDR6qcAGqL6M5J9aRtk9Q/exec'
+  const getUrl = 'https://script.google.com/macros/s/AKfycbxUVbLkNodz54cSxQmlwy18-dad-k82RQG2niRG4oH9RIA5Wov_SempUyIxb23OA0M8Rg/exec'
 
   const extractInstagramPostId = (url: string): string | null => {
     try {
