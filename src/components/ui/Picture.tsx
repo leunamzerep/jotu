@@ -43,7 +43,7 @@ export const Picture = ({ name, alt, sizes, priority = false, className }: Props
   const fallbackWidth = widths.reduce((a, b) => (Math.abs(b - 1200) < Math.abs(a - 1200) ? b : a));
 
   return (
-    <picture>
+    <picture className="block">
       <source type="image/avif" srcSet={srcSet(name, widths, "avif")} sizes={sizes} />
       <source type="image/webp" srcSet={srcSet(name, widths, "webp")} sizes={sizes} />
       <img

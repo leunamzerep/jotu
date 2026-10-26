@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "./icons";
 import { cx } from "./cx";
 
-type Variant = "primary" | "secondary" | "link";
+type Variant = "primary" | "secondary" | "link" | "light";
 
 type Props = {
   children: ReactNode;
@@ -28,6 +28,8 @@ const styles: Record<Variant, string> = {
   secondary:
     "rounded-full border border-jotu-navy-950/25 bg-transparent px-6 py-3 text-jotu-navy-950 " +
     "hover:border-jotu-teal-600 hover:text-jotu-teal-600",
+  light:
+    "rounded-full bg-jotu-white px-6 py-3 text-jotu-navy-950 shadow-soft hover:bg-jotu-mist active:translate-y-px",
   link:
     "rounded-sm text-jotu-teal-600 underline decoration-jotu-teal-600/30 underline-offset-4 " +
     "hover:decoration-jotu-teal-600",
@@ -38,6 +40,7 @@ const styles: Record<Variant, string> = {
  * - primary: fondo navy (llamada a la acción principal)
  * - secondary: borde fino
  * - link: texto teal con flecha
+ * - light: fondo blanco, para usar sobre fondos navy
  * Según las props es un <Link> interno (to), un <a> externo (href) o un <button>.
  */
 export const Button = ({ children, variant = "primary", className, to, href, ariaLabel, type = "button", onClick, disabled }: Props) => {
