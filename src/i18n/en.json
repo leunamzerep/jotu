@@ -133,6 +133,18 @@
     "whatsapp": {
         "message": "👋 Hi!\nThank you for contacting JoTu Solutions LLC.\n\n🕒 Our business hours are:\nMonday to Friday from 9:00 a.m. to 5:00 p.m. (Eastern Time, ET).\n\n✅ One of our representatives will reply shortly.\nIn the meantime, please tell us your name and how we can help you.\n\n📌 Thank you for choosing JoTu Solutions LLC"
     },
+    "a11y": {
+        "skip": "Skip to content",
+        "menu": "Main menu",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "home": "JoTu Solutions – Home",
+        "langSwitch": "Current language: English. Switch to Spanish",
+        "whatsapp": "Message us on WhatsApp (opens in a new tab)",
+        "instagram": "Instagram (opens in a new tab)",
+        "facebook": "Facebook (opens in a new tab)",
+        "email": "Send us an email (opens in a new tab)"
+    },
     "notFound": {
         "title": "Page not found",
         "description": "The page you are looking for does not exist or has moved.",

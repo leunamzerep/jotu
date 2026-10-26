@@ -133,6 +133,18 @@
     "whatsapp": {
         "message": "👋 ¡Hola!\nGracias por comunicarte con JoTu Solutions LLC.\n\n🕒 Nuestro horario de atención es:\nLunes a Viernes de 9:00 a.m. a 5:00 p.m. (hora del Este, ET).\n\n✅ En breve, uno de nuestros representantes te responderá.\nMientras tanto, por favor dinos tu nombre y cómo podemos ayudarte.\n\n📌 ¡Gracias por elegir a JoTu Solutions LLC"
     },
+    "a11y": {
+        "skip": "Saltar al contenido",
+        "menu": "Menú principal",
+        "openMenu": "Abrir menú",
+        "closeMenu": "Cerrar menú",
+        "home": "JoTu Solutions – Inicio",
+        "langSwitch": "Idioma actual: español. Cambiar a inglés",
+        "whatsapp": "Escríbenos por WhatsApp (se abre en una pestaña nueva)",
+        "instagram": "Instagram (se abre en una pestaña nueva)",
+        "facebook": "Facebook (se abre en una pestaña nueva)",
+        "email": "Envíanos un correo (se abre en una pestaña nueva)"
+    },
     "notFound": {
         "title": "Página no encontrada",
         "description": "La página que buscas no existe o cambió de dirección.",
