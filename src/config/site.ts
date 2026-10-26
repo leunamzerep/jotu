@@ -5,6 +5,18 @@
 /** Dominio oficial (sin barra final). */
 export const SITE_URL = "https://jotusolutions.net";
 
+/**
+ * Imagen que se ve al compartir la web en redes (og:image / twitter:image).
+ * Archivo: public/og-image.png, horizontal de 1200x630.
+ * Si se cambia la imagen, actualizar aquí width, height y el alt.
+ */
+export const OG_IMAGE = {
+  path: "/og-image.png",
+  width: 1200,
+  height: 630,
+  alt: "JoTu Solutions logo with the tagline: Building confidence through financial clarity.",
+};
+
 /** Teléfono tal como se muestra en la web. */
 export const PHONE_DISPLAY = "+1 (917) 915-6583";
 
