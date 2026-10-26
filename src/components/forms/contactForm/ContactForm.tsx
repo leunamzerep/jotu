@@ -1,21 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { CONTACT_WORKER_URL } from "@/config/site";
 import styles from './ContactForm.module.css'
 
-type form = { canAnimate: boolean }
 type SubmitState = "idle" | "loading" | "success";
 
-export const ContactForm = ({ canAnimate }: form) => {
+export const ContactForm = () => {
 
   const { t } = useTranslation();
-
-  useEffect(() => {
-    if (!canAnimate) return;
-    const id = requestAnimationFrame(() => setAnimate(true));
-    return () => cancelAnimationFrame(id);
-  }, [canAnimate]);
 
   const buildGmailLink = (to: string, subject: string, body: string) => {
     const params = new URLSearchParams({
@@ -32,8 +25,6 @@ export const ContactForm = ({ canAnimate }: form) => {
     email: false,
     message: false,
   });
-
-  const [animate, setAnimate] = useState(false);
 
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
 
@@ -98,7 +89,7 @@ export const ContactForm = ({ canAnimate }: form) => {
 
 
   return (
-    <section className={`${styles.displayContainer} ${animate ? styles.appear : ''}`}>
+    <section className={styles.displayContainer} data-reveal>
       <form onSubmit={onSubmit} className={styles.formContainer}>
         <h2 className={styles.invitation}>{t('contact.invitation')}</h2>
         <label htmlFor="name">

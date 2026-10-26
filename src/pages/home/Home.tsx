@@ -16,13 +16,10 @@ import home6 from "@/assets/img/home6.avif";
 import styles from "./Home.module.css";
 import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
 
-type HomeProps = { canAnimate: boolean };
-
-export const Home = ({ canAnimate }: HomeProps) => {
+export const Home = () => {
 
   const { t } = useTranslation();
   const h1 = t("home.main")
-  const [animate, setAnimate] = useState(false);
 
   const extractInstagramPostId = (url: string): string | null => {
     try {
@@ -34,12 +31,6 @@ export const Home = ({ canAnimate }: HomeProps) => {
   };
 
   const [igPostIds, setIgPostIds] = useState<string[]>([]);
-
-  useEffect(() => {
-    if (!canAnimate) return;
-    const id = requestAnimationFrame(() => setAnimate(true));
-    return () => cancelAnimationFrame(id);
-  }, [canAnimate]);
 
   useEffect(() => {
     (async () => {
@@ -72,44 +63,44 @@ export const Home = ({ canAnimate }: HomeProps) => {
       </Helmet>
 
       <main className={styles.mainContainer}>
-        <SeoEntry imgPath={mainImg} content={h1} canAnimate={canAnimate} />
+        <SeoEntry imgPath={mainImg} content={h1} />
         <div className={styles.infoContainer}>
-          <div className={`${styles.item} ${animate ? styles.enter : ""}`}>
+          <div className={styles.item} data-reveal>
             <img src={home1} className={styles.home1} />
             <div className={styles.textContainer1}>
               <h2 className={styles.itemTitle}>{t("home.title1")}</h2>
               <h3 className={styles.itemText}>{t("home.text1")}</h3>
             </div>
           </div>
-          <div className={`${styles.item} ${animate ? styles.enter : ""}`} >
+          <div className={styles.item} data-reveal>
             <div className={styles.textContainer2}>
               <h2 className={styles.itemTitle}>{t("home.title2")}</h2>
               <h3 className={styles.itemText}>{t("home.text2")}</h3>
             </div>
             <img src={home2} className={styles.home2} />
           </div>
-          <div className={`${styles.item} ${animate ? styles.enter : ""}`}>
+          <div className={styles.item} data-reveal>
             <img src={home3} className={styles.home1} />
             <div className={styles.textContainer1}>
               <h2 className={styles.itemTitle}>{t("home.title3")}</h2>
               <h3 className={styles.itemText}>{t("home.text3")}</h3>
             </div>
           </div>
-          <div className={`${styles.item} ${animate ? styles.enter : ""}`}>
+          <div className={styles.item} data-reveal>
             <div className={styles.textContainer2}>
               <h2 className={styles.itemTitle}>{t("home.title4")}</h2>
               <h3 className={styles.itemText}>{t("home.text4")}</h3>
             </div>
             <img src={home4} className={styles.home2} />
           </div>
-          <div className={`${styles.item} ${animate ? styles.enter : ""}`}>
+          <div className={styles.item} data-reveal>
             <img src={home5} className={styles.home1} />
             <div className={styles.textContainer1}>
               <h2 className={styles.itemTitle}>{t("home.title5")}</h2>
               <h3 className={styles.itemText}>{t("home.text5")}</h3>
             </div>
           </div>
-          <div className={`${styles.item} ${animate ? styles.enter : ""}`}>
+          <div className={styles.item} data-reveal>
             <div className={styles.textContainer2}>
               <h2 className={styles.itemTitle}>{t("home.title6")}</h2>
               <h3 className={styles.itemText}>{t("home.text6")}</h3>

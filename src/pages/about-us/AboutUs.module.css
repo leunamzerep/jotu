@@ -8,13 +8,13 @@
   align-items: center;
   gap: 20px;
   padding: 25px 80px;
-  opacity: 0;
   transition: opacity 1.2s ease;
 }
 
-.appear {
-  opacity: 1;
-  transition: opacity 1.2s ease;
+/* Oculto solo mientras espera su animación de entrada (ver useReveal.ts).
+   Sin JavaScript o en el prerender se ve siempre. */
+:global(.reveal-ready) .header:not([data-shown]) {
+  opacity: 0;
 }
 
 .mainTitle {
@@ -50,29 +50,30 @@
   overflow: hidden;
   justify-content: center;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-  opacity: 0;
   transform: translateX(0);
   transition: transform 900ms ease-in-out, opacity 1200ms ease-in, box-shadow 300ms ease;
   will-change: transform, opacity;
 }
 
-.item:nth-child(odd) {
+.item:hover {
+  transition: transform 200ms ease, box-shadow 300ms ease;
+  transform: translateX(0) translateY(-4px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Entrada al hacer scroll (ver useReveal.ts): las tarjetas impares llegan
+   desde la izquierda y las pares desde la derecha. Sin JavaScript o en el
+   prerender se ven siempre en su sitio. */
+:global(.reveal-ready) .item:not([data-shown]) {
+  opacity: 0;
+}
+
+:global(.reveal-ready) .item:nth-child(odd):not([data-shown]) {
   transform: translateX(-150px);
 }
 
-.item:nth-child(even) {
+:global(.reveal-ready) .item:nth-child(even):not([data-shown]) {
   transform: translateX(150px);
-}
-
-.enter {
-  opacity: 1;
-  transform: translateY(0) !important;
-}
-
-.item.enter:hover {
-  transition: transform 200ms ease, box-shadow 300ms ease;
-  transform: translateX(0) translateY(-4px) !important;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .textContainer {

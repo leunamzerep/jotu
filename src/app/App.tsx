@@ -1,55 +1,42 @@
 import { AnimatePresence } from "framer-motion";
-import { useMemo, useState } from "react";
 import { RouterProvider, Outlet, createBrowserRouter } from "react-router-dom";
 
 import { PrerenderReady } from "./PrerenderReady";
 
 import { Header } from "@/components/layout/header/Header";
 import { Footer } from "@/components/layout/footer/Footer";
-import { SplashScreen } from "@/components/layout/splashScreen/SplashScreen";
+import { useReveal } from "@/components/layout/useReveal";
 import { createServerRoutes } from "./routes.ssr";
 
 import "@/styles/global.css";
 
-const Layout = () => (
-  <>
-    <Header />
-    <AnimatePresence mode="wait">
-      <Outlet />
-    </AnimatePresence>
-    <Footer />
-  </>
-);
+const Layout = () => {
+  // Animación de entrada al hacer scroll (solo una mejora: sin JS todo se ve)
+  useReveal();
 
-export const App = () => {
-  const isPrerender =
-    typeof window !== "undefined" &&
-    (window as any).__PRERENDER_INJECTED?.prerender === true;
-
-  const [canAnimate, setCanAnimate] = useState(isPrerender);
-  const [showSplash, setShowSplash] = useState(!isPrerender);
-
-  const router = useMemo(
-    () =>
-      createBrowserRouter([
-        {
-          element: (
-            <>
-              {showSplash && (
-                <SplashScreen
-                  onReady={() => setCanAnimate(true)}
-                  onFinish={() => setShowSplash(false)}
-                />
-              )}
-              <Layout />
-              <PrerenderReady />
-            </>
-          ),
-          children: createServerRoutes(canAnimate),
-        },
-      ]),
-    [canAnimate, showSplash]
+  return (
+    <>
+      <Header />
+      <AnimatePresence mode="wait">
+        <Outlet />
+      </AnimatePresence>
+      <Footer />
+    </>
   );
-
-  return <RouterProvider router={router} />;
 };
+
+// Sin pantalla de carga (splash): el HTML prerenderizado ya muestra la página
+// real desde el primer momento.
+const router = createBrowserRouter([
+  {
+    element: (
+      <>
+        <Layout />
+        <PrerenderReady />
+      </>
+    ),
+    children: createServerRoutes(),
+  },
+]);
+
+export const App = () => <RouterProvider router={router} />;

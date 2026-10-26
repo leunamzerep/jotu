@@ -2,7 +2,6 @@
   display: flex;
   justify-content: start;
   width: 100%;
-  opacity: 0;
   transition: opacity 1s ease;
 }
 
@@ -69,8 +68,10 @@ textarea {
   transition: opacity 0.2s ease;
 }
 
-.appear {
-  opacity: 1;
+/* Oculto solo mientras espera su animación de entrada (ver useReveal.ts).
+   Sin JavaScript o en el prerender se ve siempre. */
+:global(.reveal-ready) .displayContainer:not([data-shown]) {
+  opacity: 0;
 }
 
 .verification {

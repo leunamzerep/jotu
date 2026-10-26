@@ -1,7 +1,6 @@
 .titleContainer {
   position: relative;
   height: 120px;
-  opacity: 0;
   transition: opacity 1s ease;
 }
 
@@ -13,8 +12,10 @@
   opacity: 0.55;
 }
 
-.appear {
-  opacity: 1;
+/* Oculto solo mientras espera su animación de entrada (ver useReveal.ts).
+   Sin JavaScript o en el prerender se ve siempre. */
+:global(.reveal-ready) .titleContainer:not([data-shown]) {
+  opacity: 0;
 }
 
 .mainTitle {

@@ -19,6 +19,9 @@ export default defineConfig({
       renderer: "@prerenderer/renderer-puppeteer",
       rendererOptions: {
         renderAfterDocumentEvent: "prerender:ready",
+        // Marca la página como prerender (window.__PRERENDER_INJECTED): así no
+        // se oculta nada para animar y el idioma del HTML estático es fijo
+        inject: { prerender: true },
       },
     }),
   ],

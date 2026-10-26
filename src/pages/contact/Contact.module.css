@@ -5,7 +5,6 @@
   padding: 30px 110px;
   justify-content: space-evenly;
   align-items: center;
-  opacity: 0;
   transition: opacity 1s ease;
 }
 
@@ -41,13 +40,18 @@ h3,
 }
 
 .mapContainer {
-  opacity: 0;
   transition: opacity 1s ease;
   padding: 0 130px 30px 130px;
 }
 
-.appear {
-  opacity: 1;
+/* Oculto solo mientras espera su animación de entrada (ver useReveal.ts).
+   Sin JavaScript o en el prerender se ve siempre. */
+:global(.reveal-ready) .main:not([data-shown]) {
+  opacity: 0;
+}
+
+:global(.reveal-ready) .mapContainer:not([data-shown]) {
+  opacity: 0;
 }
 
 @media (max-width: 767px) {

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { ContactForm } from "@/components/forms/contactForm/ContactForm";
@@ -8,19 +7,10 @@ import { MAPS_DIRECTIONS_URL, MAPS_EMBED_URL } from "@/config/site";
 import mainImg from "@/assets/img/contactMainImg.jpg";
 import styles from './Contact.module.css'
 
-type ContactProps = { canAnimate: boolean };
-
-export const Contact = ({ canAnimate }: ContactProps) => {
+export const Contact = () => {
 
   const { t } = useTranslation();
   const h1 = t('contact.main')
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    if (!canAnimate) return;
-    const id = requestAnimationFrame(() => setAnimate(true));
-    return () => cancelAnimationFrame(id);
-  }, [canAnimate]);
 
   return (
     <>
@@ -33,9 +23,9 @@ export const Contact = ({ canAnimate }: ContactProps) => {
       </Helmet>
 
       <main>
-        <div className={`${styles.main} ${animate ? styles.appear : ''}`}>
+        <div className={styles.main} data-reveal>
           <div className={styles.formContainer}>
-            <ContactForm canAnimate={canAnimate} />
+            <ContactForm />
           </div>
           <div className={styles.info}>
             <h2>{t('contact.ubih23')}</h2>
@@ -62,7 +52,7 @@ export const Contact = ({ canAnimate }: ContactProps) => {
             </h3>
           </div>
         </div>
-        <div className={`${styles.mapContainer} ${animate ? styles.appear : ''}`}>
+        <div className={styles.mapContainer} data-reveal>
           <iframe
             title="Office location"
             src={MAPS_EMBED_URL}
@@ -74,7 +64,7 @@ export const Contact = ({ canAnimate }: ContactProps) => {
             style={{ border: 0, borderRadius: "22px" }}
           />
         </div>
-        <SeoEntry imgPath={mainImg} content={h1} canAnimate={canAnimate} />
+        <SeoEntry imgPath={mainImg} content={h1} />
       </main>
     </>
   );
