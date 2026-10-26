@@ -1,0 +1,214 @@
+{
+  "about1": {
+    "width": 5472,
+    "height": 3648,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600,
+      2400
+    ]
+  },
+  "about2": {
+    "width": 6000,
+    "height": 4000,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600,
+      2400
+    ]
+  },
+  "about3": {
+    "width": 1000,
+    "height": 667,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "about4": {
+    "width": 1000,
+    "height": 1250,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "about5": {
+    "width": 1000,
+    "height": 667,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "about6": {
+    "width": 1000,
+    "height": 667,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "aboutImg": {
+    "width": 3872,
+    "height": 1937,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600,
+      2400
+    ]
+  },
+  "client1": {
+    "width": 215,
+    "height": 214,
+    "widths": [
+      215
+    ]
+  },
+  "client2": {
+    "width": 198,
+    "height": 194,
+    "widths": [
+      198
+    ]
+  },
+  "client3": {
+    "width": 570,
+    "height": 555,
+    "widths": [
+      480,
+      570
+    ]
+  },
+  "client4": {
+    "width": 215,
+    "height": 208,
+    "widths": [
+      215
+    ]
+  },
+  "client5": {
+    "width": 709,
+    "height": 700,
+    "widths": [
+      480,
+      709
+    ]
+  },
+  "client6": {
+    "width": 734,
+    "height": 720,
+    "widths": [
+      480,
+      734
+    ]
+  },
+  "contactImg": {
+    "width": 6000,
+    "height": 4000,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600,
+      2400
+    ]
+  },
+  "contactMainImg": {
+    "width": 5418,
+    "height": 3612,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600,
+      2400
+    ]
+  },
+  "fundadores": {
+    "width": 1179,
+    "height": 2096,
+    "widths": [
+      480,
+      800,
+      1179
+    ]
+  },
+  "home1": {
+    "width": 1200,
+    "height": 630,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "home2": {
+    "width": 3073,
+    "height": 2050,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600,
+      2400
+    ]
+  },
+  "home3": {
+    "width": 1000,
+    "height": 574,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "home4": {
+    "width": 1000,
+    "height": 667,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "home5": {
+    "width": 1000,
+    "height": 667,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "home6": {
+    "width": 1000,
+    "height": 668,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "mainImg": {
+    "width": 7360,
+    "height": 4912,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600,
+      2400
+    ]
+  }
+}
