@@ -4,9 +4,6 @@
 /* No buscar clases en la línea base local (copias del HTML generado) */
 @source not "../../.baseline";
 
-/* Parche temporal para las páginas viejas hasta la Sesión D */
-@import "./legacy.css";
-
 /*
  * TEMA DE JOTU (aprobado en la Sesión C). Cada token crea sus clases de Tailwind:
  * --color-jotu-teal-600 → text-jotu-teal-600, bg-jotu-teal-600, border-…
@@ -104,7 +101,6 @@
     /* Entrada al hacer scroll (src/components/layout/useReveal.ts) para los
        elementos nuevos con data-reveal="up". Solo actúa cuando el JavaScript
        activó "reveal-ready": sin JS o en el prerender todo se ve desde el inicio.
-       Las páginas viejas usan data-reveal sin valor y su propio CSS Module.
        --reveal-delay escalona tarjetas: style={{ "--reveal-delay": "120ms" }} */
     .reveal-ready [data-reveal="up"] {
         transition:
@@ -183,33 +179,10 @@
     }
 }
 
-/* Variables viejas: las usan los CSS Modules de las páginas hasta la Sesión D */
-:root {
-    /* BRAND COLORS */
-    --col1: #121f44;
-    --col2: #02174d;
-    --col3: #15466d;
-    --col4: #1c7b7e;
-    --col5: #69b8bb;
-    --back: #69b8bb7d;
-    --back2: #749c9d4b;
-    --alt: #3533cd;
-
-    /* NEUTRALS */
-    --wtext: #f8fafc;
-    --dtext: #101527;
-
-    /* TYPOGRAPHY ("Canva Sans" no se usa: el texto viejo pasa a la fuente del tema) */
-    --font: var(--font-body);
-
-    /* SIZES */
-    /* pending */
-}
-
 html {
-    font-family: var(--font);
-    color: var(--dtext);
-    background-color: var(--back);
+    font-family: var(--font-body);
+    color: var(--color-jotu-ink);
+    background-color: var(--color-jotu-white);
 }
 
 button,
