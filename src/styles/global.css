@@ -139,8 +139,8 @@
     --btext: #113c66;
     --dtext: #101527;
 
-    /* TYPOGRAPHY */
-    --font: "Canva Sans", sans-serif;
+    /* TYPOGRAPHY ("Canva Sans" no se usa: el texto viejo pasa a la fuente del tema) */
+    --font: var(--font-body);
     --bigfont: "Roboto", sans-serif;
 
     /* SIZES */
