@@ -173,8 +173,8 @@
             "desc": "Partnership information return reporting income, gains, losses, deductions and credits."
         },
         "f1120s": {
-            "name": "Form 1120-S",
-            "desc": "Income tax return for a corporation that elected S corporation status."
+            "name": "ITIN Requests",
+            "desc": "We help you request or renew your ITIN document according to your requirement."
         },
         "more": "And more solutions"
     },
