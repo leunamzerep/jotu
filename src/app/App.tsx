@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
-import { RouterProvider, Outlet, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, Outlet, ScrollRestoration, createBrowserRouter } from "react-router-dom";
 
 import { PrerenderReady } from "./PrerenderReady";
 
@@ -33,6 +33,8 @@ const Layout = () => {
           <Outlet />
         </AnimatePresence>
       </div>
+      {/* Al cambiar de página vuelve arriba; con atrás/adelante recupera la posición */}
+      <ScrollRestoration />
       <WhatsAppFloat />
       <Footer />
     </>
