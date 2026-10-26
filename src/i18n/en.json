@@ -150,8 +150,47 @@
         "description": "The page you are looking for does not exist or has moved.",
         "cta": "Go to the home page"
     },
+    "forms": {
+        "title": "Forms we help with",
+        "f1040": {
+            "name": "Form 1040",
+            "desc": "Annual individual income tax return for U.S. taxpayers."
+        },
+        "f1040nr": {
+            "name": "Form 1040-NR",
+            "desc": "Income tax return for nonresident aliens of the United States."
+        },
+        "f4868": {
+            "name": "Form 4868",
+            "desc": "Request for an automatic extension of time to file an individual income tax return."
+        },
+        "f8879": {
+            "name": "Form 8879",
+            "desc": "Signature authorization for an e-filed return."
+        },
+        "f1065": {
+            "name": "Form 1065",
+            "desc": "Partnership information return reporting income, gains, losses, deductions and credits."
+        },
+        "f1120s": {
+            "name": "Form 1120-S",
+            "desc": "Income tax return for a corporation that elected S corporation status."
+        },
+        "more": "And more solutions"
+    },
+    "founders": {
+        "title": "Founders",
+        "name1": "Bryan Moreno",
+        "name2": "Cindy Villamarin"
+    },
+    "legal": {
+        "toc": "Contents"
+    },
     "alt": {
         "logo": "JoTu Solutions logo",
-        "client": "{{name}} logo"
+        "client": "{{name}} logo",
+        "founders": "Bryan Moreno and Cindy Villamarin, founders of JoTu Solutions",
+        "instagramPost": "Instagram post",
+        "map": "Office location"
     }
 }

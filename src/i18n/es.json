@@ -150,8 +150,47 @@
         "description": "La página que buscas no existe o cambió de dirección.",
         "cta": "Ir al inicio"
     },
+    "forms": {
+        "title": "Formularios con los que ayudamos",
+        "f1040": {
+            "name": "Formulario 1040",
+            "desc": "Declaración anual de impuestos sobre los ingresos para contribuyentes en EE. UU."
+        },
+        "f1040nr": {
+            "name": "Formulario 1040-NR",
+            "desc": "Declaración de impuestos sobre los ingresos para extranjeros no residentes en EE. UU."
+        },
+        "f4868": {
+            "name": "Formulario 4868",
+            "desc": "Solicitud de prórroga automática para presentar la declaración de impuestos individual."
+        },
+        "f8879": {
+            "name": "Formulario 8879",
+            "desc": "Autorización de firma para una declaración presentada electrónicamente."
+        },
+        "f1065": {
+            "name": "Formulario 1065",
+            "desc": "Declaración informativa de sociedades (partnerships) con ingresos, ganancias, pérdidas, deducciones y créditos."
+        },
+        "f1120s": {
+            "name": "Formulario 1120-S",
+            "desc": "Declaración de impuestos para corporaciones que eligieron el estatus de S corporation."
+        },
+        "more": "Y más soluciones"
+    },
+    "founders": {
+        "title": "Fundadores",
+        "name1": "Bryan Moreno",
+        "name2": "Cindy Villamarin"
+    },
+    "legal": {
+        "toc": "Contenido"
+    },
     "alt": {
         "logo": "Logo de JoTu Solutions",
-        "client": "Logo de {{name}}"
+        "client": "Logo de {{name}}",
+        "founders": "Bryan Moreno y Cindy Villamarin, fundadores de JoTu Solutions",
+        "instagramPost": "Publicación de Instagram",
+        "map": "Ubicación de la oficina"
     }
 }
