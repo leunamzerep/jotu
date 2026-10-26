@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
+import { TextAreaField, TextField } from "@/components/ui/Field";
 import { CONTACT_WORKER_URL } from "@/config/site";
-import styles from './ContactForm.module.css'
 
 type SubmitState = "idle" | "loading" | "success" | "error";
 
@@ -89,57 +91,51 @@ export const ContactForm = () => {
     }
   };
 
+  const required = t("contact.warn");
 
   return (
-    <section className={styles.displayContainer} data-reveal>
-      <form onSubmit={onSubmit} className={styles.formContainer}>
-        <h2 className={styles.invitation}>{t('contact.invitation')}</h2>
-        <label htmlFor="name">
-          <p className={styles.labelText}>{t('contact.label1')}</p>
-          <p className={styles.labelWarn} style={{ opacity: errors.name ? 1 : 0 }}>{t('contact.warn')}</p>
-        </label>
-        <input id="name" name='name' autoComplete="name" type="text" placeholder={t('contact.place1')} />
-        <label htmlFor="email">
-          <p className={styles.labelText}>{t('contact.label2')}</p>
-          <p className={styles.labelWarn} style={{ opacity: errors.email ? 1 : 0 }}>{t('contact.warn')}</p>
-        </label>
-        <input id="email" name="email" type="email" autoComplete="email" placeholder={t('contact.place2')} />
-        <label htmlFor="message">
-          <p className={styles.labelText}>{t('contact.label3')}</p>
-          <p className={styles.labelWarn} style={{ opacity: errors.message ? 1 : 0 }}>{t('contact.warn')}</p>
-        </label>
-        <textarea id="message" name="message" autoComplete="off" className={styles.msgContainer} placeholder={t('contact.place3')} />
-        <div>
-          <button
-            type="submit"
-            className={styles.send}
-            disabled={submitState === "loading"}
-          >
+    <Card>
+      <form onSubmit={onSubmit} className="flex flex-col gap-6">
+        <h2 className="font-title text-h3 font-semibold text-balance text-jotu-navy-950">{t("contact.invitation")}</h2>
+        <TextField
+          id="name"
+          name="name"
+          type="text"
+          autoComplete="name"
+          label={t("contact.label1")}
+          placeholder={t("contact.place1")}
+          error={errors.name ? required : undefined}
+        />
+        <TextField
+          id="email"
+          name="email"
+          type="email"
+          autoComplete="email"
+          label={t("contact.label2")}
+          placeholder={t("contact.place2")}
+          error={errors.email ? required : undefined}
+        />
+        <TextAreaField
+          id="message"
+          name="message"
+          autoComplete="off"
+          label={t("contact.label3")}
+          placeholder={t("contact.place3")}
+          error={errors.message ? required : undefined}
+        />
+        <div className="flex flex-wrap items-center gap-4">
+          <Button type="submit" disabled={submitState === "loading"}>
             {t("contact.send")}
-          </button>
+          </Button>
 
           {/* Estado del envío: los lectores de pantalla lo anuncian sin mover el foco */}
-          <span role="status" aria-live="polite">
-            {submitState === "loading" && (
-              <span className={styles.verification}>
-                {t("contact.processing")}
-              </span>
-            )}
-
-            {submitState === "success" && (
-              <span className={styles.verification}>
-                {t("contact.sended")}
-              </span>
-            )}
-
-            {submitState === "error" && (
-              <span className={`${styles.verification} ${styles.error}`}>
-                {t("contact.error")}
-              </span>
-            )}
+          <span role="status" aria-live="polite" className="text-sm font-semibold">
+            {submitState === "loading" && <span className="text-jotu-ink-muted">{t("contact.processing")}</span>}
+            {submitState === "success" && <span className="text-jotu-teal-600">{t("contact.sended")}</span>}
+            {submitState === "error" && <span className="text-jotu-navy-900">{t("contact.error")}</span>}
           </span>
         </div>
       </form>
-    </section>
+    </Card>
   )
 }
