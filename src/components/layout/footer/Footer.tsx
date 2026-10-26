@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { FACEBOOK_URL, INSTAGRAM_URL } from "@/config/site";
 import { useWhatsappUrl } from "@/config/whatsapp";
 import { PATHS } from "@/config/paths";
+import { FacebookIcon, InstagramIcon, MailIcon, WhatsAppIcon } from "@/components/ui/icons";
 import logo from "@/assets/img/JoTu_icono_color.png";
 import styles from './Footer.module.css'
 
@@ -58,21 +59,21 @@ export const Footer = () => {
         <img src={logo} className={styles.logo} alt={t("alt.logo")} />
         <div className={styles.socialContainer}>
           <div className={styles.medias}>
-            <a className={styles.media} style={{ backgroundColor: '#fea501' }} href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-              <i className="fa-brands fa-instagram"></i>
+            <a className={styles.media} style={{ backgroundColor: '#fea501' }} href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label={t("a11y.instagram")}>
+              <InstagramIcon className="size-[1em]" />
             </a>
-            <a className={styles.media} style={{ backgroundColor: '#1970ff' }} href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
-              <i className="fa-brands fa-facebook"></i>
+            <a className={styles.media} style={{ backgroundColor: '#1970ff' }} href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" aria-label={t("a11y.facebook")}>
+              <FacebookIcon className="size-[1em]" />
             </a>
-            <a className={styles.media} style={{ backgroundColor: '#e23f33' }} href={mailLink} target="_blank" rel="noopener noreferrer">
-              <i className="fa-regular fa-envelope"></i>
+            <a className={styles.media} style={{ backgroundColor: '#e23f33' }} href={mailLink} target="_blank" rel="noopener noreferrer" aria-label={t("a11y.email")}>
+              <MailIcon className="size-[1em]" />
             </a>
           </div>
           <p className={styles.legalAdvice}>{t("footer.copyright", { year: new Date().getFullYear() })}</p>
         </div>
       </div>
-      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className={styles.whatsappFloat} style={{ bottom: `${buttonBottom}px` }}>
-        <i className="fa-brands fa-whatsapp"></i>
+      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className={styles.whatsappFloat} style={{ bottom: `${buttonBottom}px` }} aria-label={t("a11y.whatsapp")}>
+        <WhatsAppIcon className="size-[1em]" />
       </a>
     </section>
   )
