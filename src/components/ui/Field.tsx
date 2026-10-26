@@ -13,7 +13,7 @@ type Common = {
 
 const control =
   "w-full rounded-lg border border-jotu-line bg-jotu-white px-4 py-3 text-base text-jotu-ink " +
-  "placeholder:text-jotu-ink-muted/70 transition-colors hover:border-jotu-ink-muted/40 " +
+  "placeholder:text-jotu-ink-muted/90 transition-colors hover:border-jotu-ink-muted/40 " +
   "focus-visible:border-jotu-teal-600 aria-invalid:border-jotu-navy-900";
 
 /** Atributos de accesibilidad del campo según haya error o no. */
