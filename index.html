@@ -21,11 +21,24 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <style>
+    html.spa-redirect body {
+      visibility: hidden;
+    }
+  </style>
   <script>
     (function () {
       const redirectPath = sessionStorage.getItem("spa-fallback");
       if (!redirectPath) return;
       sessionStorage.removeItem("spa-fallback");
+
+      // Oculta la página hasta que React muestre la ruta pedida (src/app/App.tsx
+      // quita la clase). Así no se ve Inicio un instante. Por seguridad, se
+      // muestra igual a los 3 segundos.
+      document.documentElement.classList.add("spa-redirect");
+      setTimeout(function () {
+        document.documentElement.classList.remove("spa-redirect");
+      }, 3000);
 
       const url = new URL(redirectPath, window.location.origin);
       const newUrl = url.pathname + url.search + url.hash;
