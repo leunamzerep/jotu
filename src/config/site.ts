@@ -1,7 +1,6 @@
 // Datos del sitio en un solo lugar: dominio, contacto, redes y servicios externos.
-// Si cambia alguno de estos datos, cámbialo aquí. Ojo: public/sitemap.xml,
-// public/robots.txt e index.html son archivos estáticos y repiten el dominio.
-// Los canonical de cada página (Helmet) también lo repiten hasta la Sesión B.
+// Si cambia alguno de estos datos, cámbialo aquí. Ojo: public/sitemap.xml y
+// public/robots.txt son archivos estáticos y repiten el dominio.
 
 /** Dominio oficial (sin barra final). */
 export const SITE_URL = "https://jotusolutions.net";

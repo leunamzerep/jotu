@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
+import { PageSeo } from "@/components/seo/PageSeo";
 
 import styles from './TermsAndConditions.module.css'
 import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
@@ -12,13 +12,7 @@ export const TermsAndConditions = () => {
 
   return (
     <>
-      <Helmet defer={false}>
-        <title>{t('seo.termsTitle')}</title>
-        <meta name="description" content={t('seo.termsDescription')} />
-        <link rel="canonical" href="https://jotusolutions.net/terms-and-conditions" />
-        <link rel="alternate" hrefLang="es" href="https://jotusolutions.net/" />
-        <link rel="alternate" hrefLang="x-default" href="https://jotusolutions.net/" />
-      </Helmet>
+      <PageSeo title={t("seo.termsTitle")} description={t("seo.termsDescription")} />
 
       <main>
         <SeoEntry imgPath={aboutImg} content={h1} />

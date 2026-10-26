@@ -81,8 +81,9 @@ En los imports, `@/` significa `src/` (por ejemplo `@/config/site`).
 | Teléfono, WhatsApp, correo, dirección, redes, mapa | `src/config/site.ts` |
 | Dirección del formulario y del feed de Instagram | `src/config/site.ts` |
 | Enlaces internos del menú y el pie | `src/config/paths.ts` |
+| Título y descripción de cada página (SEO) | `seo.*` en `src/i18n/en.json` y `es.json`; las etiquetas las pone `src/components/seo/PageSeo.tsx` |
 | Textos de la web (incluidos los legales) | `src/i18n/es.json` y `src/i18n/en.json` |
-| Dominio | `src/config/site.ts` **y además** estos archivos, que no leen la configuración: `public/sitemap.xml`, `public/robots.txt`, el `<head>` de `index.html` y, por ahora, los canonical de cada página en `src/pages/` |
+| Dominio | `src/config/site.ts` **y además** estos archivos, que no leen la configuración: `public/sitemap.xml` y `public/robots.txt` |
 
 ## Comprobación antes y después de cambios (solo en local)
 

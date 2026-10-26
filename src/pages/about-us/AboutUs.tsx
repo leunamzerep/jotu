@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
+import { PageSeo } from "@/components/seo/PageSeo";
 
 import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
 import { ContactCard } from "@/components/sections/contactCard/ContactCard";
@@ -27,13 +27,7 @@ export const AboutUs = () => {
 
   return (
     <>
-      <Helmet defer={false}>
-        <title>{t('seo.aboutUsTitle')}</title>
-        <meta name="description" content={t('seo.aboutUsDescription')} />
-        <link rel="canonical" href="https://jotusolutions.net/about-us" />
-        <link rel="alternate" hrefLang="es" href="https://jotusolutions.net/" />
-        <link rel="alternate" hrefLang="x-default" href="https://jotusolutions.net/" />
-      </Helmet>
+      <PageSeo title={t("seo.aboutUsTitle")} description={t("seo.aboutUsDescription")} />
 
       <main>
         <SeoEntry imgPath={aboutImg} content={h1} />

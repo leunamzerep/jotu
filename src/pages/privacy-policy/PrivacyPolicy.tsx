@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
+import { PageSeo } from "@/components/seo/PageSeo";
 
 import styles from './PrivacyPolicy.module.css'
 
@@ -13,13 +13,7 @@ export const PrivacyPolicy = () => {
 
   return (
     <>
-      <Helmet defer={false}>
-        <title>{t('seo.privacyTitle')}</title>
-        <meta name="description" content={t('seo.privacyDescription')} />
-        <link rel="canonical" href="https://jotusolutions.net/privacy-policy" />
-        <link rel="alternate" hrefLang="es" href="https://jotusolutions.net/" />
-        <link rel="alternate" hrefLang="x-default" href="https://jotusolutions.net/" />
-      </Helmet>
+      <PageSeo title={t("seo.privacyTitle")} description={t("seo.privacyDescription")} />
 
       <main>
         <SeoEntry imgPath={aboutImg} content={h1} />

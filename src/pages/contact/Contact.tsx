@@ -1,5 +1,5 @@
 import { useTranslation, Trans } from "react-i18next";
-import { Helmet } from "react-helmet-async";
+import { PageSeo } from "@/components/seo/PageSeo";
 import { ContactForm } from "@/components/forms/contactForm/ContactForm";
 import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
 import { MAPS_DIRECTIONS_URL, MAPS_EMBED_URL } from "@/config/site";
@@ -14,13 +14,7 @@ export const Contact = () => {
 
   return (
     <>
-      <Helmet defer={false}>
-        <title>{t('seo.contactTitle')}</title>
-        <meta name="description" content={t('seo.contactDescription')} />
-        <link rel="canonical" href="https://jotusolutions.net/contact" />
-        <link rel="alternate" hrefLang="es" href="https://jotusolutions.net/" />
-        <link rel="alternate" hrefLang="x-default" href="https://jotusolutions.net/" />
-      </Helmet>
+      <PageSeo title={t("seo.contactTitle")} description={t("seo.contactDescription")} />
 
       <main>
         <div className={styles.main} data-reveal>

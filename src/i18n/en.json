@@ -1,15 +1,17 @@
 {
     "seo": {
-        "homeTitle": "JoTu Solutions LLC",
-        "homeDescription": "We offer LLC formation services in the United States, bookkeeping services, and ITIN assistance. Contact us to help you establish your business correctly, whether you are inside or outside the United States.",
-        "aboutUsTitle": "About Us - JoTu Solutions LLC",
-        "aboutUsDescription": "At JoTu Solutions LLC, we specialize in tax solutions, business formation, and procedures with U.S. government entities. Our commitment is to provide professional and personalized service to meet all your business needs.",
-        "contactTitle": "Contact - JoTu Solutions LLC",
-        "contactDescription": "Contact us for tax solutions, business formation, and government procedures in the United States. We are here to support your business and tax needs. Your success is our priority.",
-        "privacyTitle": "Privacy Policy - JoTu Solutions LLC",
-        "privacyDescription": "When you visit JoTu Solutions LLC, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies installed on your device.",
-        "termsTitle": "Terms and Conditions - JoTu Solutions LLC",
-        "termsDescription": "By accessing this website, we assume you accept these terms and conditions. Do not continue using JoTu Solutions LLC if you do not agree with all the terms and conditions stated on this page."
+        "homeTitle": "JoTu Solutions | Tax, Bookkeeping & LLC Services in the U.S.",
+        "homeDescription": "Tax preparation, bookkeeping, LLC formation and business compliance in the United States, with personalized support from Orlando, FL.",
+        "aboutUsTitle": "About Us | JoTu Solutions",
+        "aboutUsDescription": "JoTu Solutions is a family-owned company in Orlando, FL, with over 10 years of experience in accounting and business compliance in the U.S.",
+        "contactTitle": "Contact Us | JoTu Solutions",
+        "contactDescription": "Contact JoTu Solutions in Orlando, FL, by phone, WhatsApp or email. We are available Monday to Friday, 9 AM to 5 PM Eastern Time.",
+        "privacyTitle": "Privacy Policy | JoTu Solutions",
+        "privacyDescription": "How JoTu Solutions LLC collects, uses and protects the information you share through this website.",
+        "termsTitle": "Terms and Conditions | JoTu Solutions",
+        "termsDescription": "Terms and conditions for using the JoTu Solutions LLC website and services.",
+        "notFoundTitle": "Page Not Found | JoTu Solutions",
+        "notFoundDescription": "The page you are looking for does not exist or has moved. Go back to the JoTu Solutions home page."
     },
     "header": {
         "home": "Home",

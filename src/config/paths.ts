@@ -1,13 +1,13 @@
-// Enlaces internos del sitio en un solo lugar.
-// Hoy van SIN barra final, igual que la web publicada. CLAUDE.md fija que
-// pasarán a llevar barra final (/about-us/); eso se hace en la Sesión B (SEO),
-// junto con el canonical y el sitemap. Las rutas de react-router
-// (src/app/routes.tsx) no dependen de este archivo.
+// Enlaces internos del sitio, siempre con barra final (/about-us/), que es la
+// forma que publica GitHub Pages (about-us/index.html) y la del canonical y el
+// sitemap. Sin barra, GitHub Pages responde con una redirección 301 extra.
+// Las rutas de react-router (src/app/routes.tsx) siguen sin barra: el router
+// acepta las dos formas.
 
 export const PATHS = {
   home: "/",
-  aboutUs: "/about-us",
-  contact: "/contact",
-  terms: "/terms-and-conditions",
-  privacy: "/privacy-policy",
+  aboutUs: "/about-us/",
+  contact: "/contact/",
+  terms: "/terms-and-conditions/",
+  privacy: "/privacy-policy/",
 } as const;

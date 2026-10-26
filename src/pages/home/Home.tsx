@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
+import { PageSeo } from "@/components/seo/PageSeo";
 
 import { ContactCard } from "@/components/sections/contactCard/ContactCard";
 import { INSTAGRAM_FEED_URL } from "@/config/site";
@@ -54,13 +54,7 @@ export const Home = () => {
 
   return (
     <>
-      <Helmet defer={false}>
-        <title>{t("seo.homeTitle")}</title>
-        <meta name="description" content={t("seo.homeDescription")} />
-        <link rel="canonical" href="https://jotusolutions.net" />
-        <link rel="alternate" hrefLang="es" href="https://jotusolutions.net/" />
-        <link rel="alternate" hrefLang="x-default" href="https://jotusolutions.net/" />
-      </Helmet>
+      <PageSeo title={t("seo.homeTitle")} description={t("seo.homeDescription")} />
 
       <main className={styles.mainContainer}>
         <SeoEntry imgPath={mainImg} content={h1} />
