@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import { ContactForm } from "../../components/contactForm/ContactForm";
-import { SeoEntry } from "../../components/seoEntry/SeoEntry";
+import { ContactForm } from "@/components/forms/contactForm/ContactForm";
+import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
 
 import mainImg from "../../assets/img/contactMainImg.jpg";
 import styles from './Contact.module.css'

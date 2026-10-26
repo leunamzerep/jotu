@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 
-import { SeoEntry } from "../../components/seoEntry/SeoEntry";
-import { ContactCard } from "../../components/contactCard/ContactCard";
+import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
+import { ContactCard } from "@/components/sections/contactCard/ContactCard";
 
 
 import aboutImg from "../../assets/img/aboutImg.jpg"
