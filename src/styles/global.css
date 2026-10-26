@@ -81,6 +81,14 @@
         --focus-ring: var(--color-jotu-teal-600);
     }
 
+    /* La página ocupa al menos el alto de la pantalla: en páginas cortas (404)
+       el pie queda abajo, porque #contenido crece para llenar el hueco */
+    #root {
+        display: flex;
+        min-height: 100dvh;
+        flex-direction: column;
+    }
+
     /* Foco visible solo al navegar con teclado */
     :focus-visible {
         outline: 3px solid var(--focus-ring);

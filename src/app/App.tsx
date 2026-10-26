@@ -26,9 +26,12 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <AnimatePresence mode="wait">
-        <Outlet />
-      </AnimatePresence>
+      {/* Destino del enlace "Saltar al contenido" del Header */}
+      <div id="contenido" tabIndex={-1} className="flex-1 outline-none">
+        <AnimatePresence mode="wait">
+          <Outlet />
+        </AnimatePresence>
+      </div>
       <Footer />
     </>
   );
