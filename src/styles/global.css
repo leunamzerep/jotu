@@ -21,7 +21,7 @@
     --color-jotu-navy-950: #121f44;       /* --col1: fondos oscuros */
     --color-jotu-navy-900: #02174d;       /* --col2 */
     --color-jotu-ink: #101527;            /* --dtext: texto principal */
-    --color-jotu-blue-800: #003b68;       /* letras del logo (≈ --btext) */
+    --color-jotu-blue-800: #003b68;       /* letras del logo (≈ el antiguo --btext #113c66) */
     --color-jotu-blue-700: #15466d;       /* --col3: pétalo azul */
     --color-jotu-teal-600: #1c7b7e;       /* --col4: pétalo teal, acento (AA sobre blanco 5.0:1) */
     --color-jotu-turquoise-400: #69b8bb;  /* --col5: pétalo turquesa. Solo decoración o sobre navy (7.0:1), nunca texto sobre blanco */
@@ -144,12 +144,10 @@
 
     /* NEUTRALS */
     --wtext: #f8fafc;
-    --btext: #113c66;
     --dtext: #101527;
 
     /* TYPOGRAPHY ("Canva Sans" no se usa: el texto viejo pasa a la fuente del tema) */
     --font: var(--font-body);
-    --bigfont: "Roboto", sans-serif;
 
     /* SIZES */
     /* pending */
