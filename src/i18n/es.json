@@ -87,7 +87,8 @@
         "ubih24": "¿Cómo llegar?",
         "ubih34": "Sigue el mapa a continuación o <1>haz clic aquí</1>",
         "sended": "Solicitud enviada correctamente",
-        "processing": "Procesando"
+        "processing": "Procesando",
+        "error": "No se pudo enviar tu mensaje. Inténtalo de nuevo o escríbenos por WhatsApp o correo."
     },
     "terms": {
         "h1": "Términos y Condiciones",

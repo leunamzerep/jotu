@@ -87,7 +87,8 @@
         "ubih24": "How to Get Here",
         "ubih34": "Follow the map below or <1>click here</1>.",
         "sended": "Your message was sent successfully.",
-        "processing": "Processing"
+        "processing": "Processing",
+        "error": "Your message could not be sent. Please try again or contact us by WhatsApp or email."
     },
     "terms": {
         "h1": "Terms and Conditions",

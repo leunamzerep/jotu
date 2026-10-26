@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { CONTACT_WORKER_URL } from "@/config/site";
 import styles from './ContactForm.module.css'
 
-type SubmitState = "idle" | "loading" | "success";
+type SubmitState = "idle" | "loading" | "success" | "error";
 
 export const ContactForm = () => {
 
@@ -78,13 +78,15 @@ export const ContactForm = () => {
       } else {
         throw new Error(json.error || "Error al enviar");
       }
-    } catch {
-      setSubmitState("idle");
-    }
 
-    setTimeout(() => {
-      setSubmitState("idle");
-    }, 4567);
+      // El aviso de éxito se quita solo a los pocos segundos
+      setTimeout(() => {
+        setSubmitState("idle");
+      }, 4567);
+    } catch {
+      // Si falla, el aviso de error se queda hasta el siguiente intento
+      setSubmitState("error");
+    }
   };
 
 
@@ -97,16 +99,16 @@ export const ContactForm = () => {
           <p className={styles.labelWarn} style={{ opacity: errors.name ? 1 : 0 }}>{t('contact.warn')}</p>
         </label>
         <input id="name" name='name' autoComplete="name" type="text" placeholder={t('contact.place1')} />
-        <label htmlFor="mail">
+        <label htmlFor="email">
           <p className={styles.labelText}>{t('contact.label2')}</p>
           <p className={styles.labelWarn} style={{ opacity: errors.email ? 1 : 0 }}>{t('contact.warn')}</p>
         </label>
         <input id="email" name="email" type="email" autoComplete="email" placeholder={t('contact.place2')} />
-        <label htmlFor="mesagge">
+        <label htmlFor="message">
           <p className={styles.labelText}>{t('contact.label3')}</p>
           <p className={styles.labelWarn} style={{ opacity: errors.message ? 1 : 0 }}>{t('contact.warn')}</p>
         </label>
-        <textarea id="mesagge" name="message" autoComplete="off" className={styles.msgContainer} placeholder={t('contact.place3')} />
+        <textarea id="message" name="message" autoComplete="off" className={styles.msgContainer} placeholder={t('contact.place3')} />
         <div>
           <button
             type="submit"
@@ -116,17 +118,26 @@ export const ContactForm = () => {
             {t("contact.send")}
           </button>
 
-          {submitState === "loading" && (
-            <span className={styles.verification}>
-              {t("contact.processing")}
-            </span>
-          )}
+          {/* Estado del envío: los lectores de pantalla lo anuncian sin mover el foco */}
+          <span role="status" aria-live="polite">
+            {submitState === "loading" && (
+              <span className={styles.verification}>
+                {t("contact.processing")}
+              </span>
+            )}
 
-          {submitState === "success" && (
-            <span className={styles.verification}>
-              {t("contact.sended")}
-            </span>
-          )}
+            {submitState === "success" && (
+              <span className={styles.verification}>
+                {t("contact.sended")}
+              </span>
+            )}
+
+            {submitState === "error" && (
+              <span className={`${styles.verification} ${styles.error}`}>
+                {t("contact.error")}
+              </span>
+            )}
+          </span>
         </div>
       </form>
     </section>

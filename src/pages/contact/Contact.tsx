@@ -38,7 +38,7 @@ export const Contact = () => {
                       className={styles.inlineLink}
                       href={MAPS_DIRECTIONS_URL}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                     />
                   ),
                 }}
