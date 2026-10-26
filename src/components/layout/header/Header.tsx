@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { LanguageSwitch } from "../components/langSwitch/LangSwitch";
+import { LanguageSwitch } from "@/components/langSwitch/LangSwitch";
 import { Link } from "react-router-dom";
 
-import logo from "../assets/img/JoTu_color_1.png";
+import logo from "@/assets/img/JoTu_color_1.png";
 import styles from './Header.module.css'
 
 export const Header = () => {

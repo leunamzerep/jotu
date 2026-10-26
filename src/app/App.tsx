@@ -4,9 +4,9 @@ import { RouterProvider, Outlet, createBrowserRouter } from "react-router-dom";
 
 import { PrerenderReady } from "./PrerenderReady";
 
-import { Header } from "@/header/Header";
-import { Footer } from "@/footer/Footer";
-import { SplashScreen } from "@/components/splashScreen/SplashScreen";
+import { Header } from "@/components/layout/header/Header";
+import { Footer } from "@/components/layout/footer/Footer";
+import { SplashScreen } from "@/components/layout/splashScreen/SplashScreen";
 import { createServerRoutes } from "./routes.ssr";
 
 import "@/assets/css/app.css";

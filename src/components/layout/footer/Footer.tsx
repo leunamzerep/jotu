@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 
-import logo from "../assets/img/JoTu_icono_color.png";
+import logo from "@/assets/img/JoTu_icono_color.png";
 import styles from './Footer.module.css'
 
 export const Footer = () => {
