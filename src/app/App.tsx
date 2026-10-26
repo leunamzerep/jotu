@@ -9,7 +9,7 @@ import { Footer } from "@/components/layout/footer/Footer";
 import { SplashScreen } from "@/components/layout/splashScreen/SplashScreen";
 import { createServerRoutes } from "./routes.ssr";
 
-import "@/assets/css/app.css";
+import "@/styles/global.css";
 
 const Layout = () => (
   <>
