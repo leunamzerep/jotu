@@ -1,126 +1,89 @@
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+
 import { PageSeo } from "@/components/seo/PageSeo";
-
 import { ContactCard } from "@/components/sections/contactCard/ContactCard";
-import { INSTAGRAM_FEED_URL } from "@/config/site";
+import { FormsSection } from "@/components/sections/forms/FormsSection";
+import { InstagramFeed } from "@/components/sections/instagramFeed/InstagramFeed";
+import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
+import { LotusPetals } from "@/components/ui/Decor";
+import { Picture } from "@/components/ui/Picture";
+import { Container, Section } from "@/components/ui/Section";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PATHS } from "@/config/paths";
+import { useWhatsappUrl } from "@/config/whatsapp";
 
-import mainImg from "@/assets/img/mainImg.jpg";
-import home1 from "@/assets/img/home1.webp";
-import home2 from "@/assets/img/home2.jpg";
-import home3 from "@/assets/img/home3.avif";
-import home4 from "@/assets/img/home4.avif";
-import home5 from "@/assets/img/home5.avif";
-import home6 from "@/assets/img/home6.avif";
-
-import styles from "./Home.module.css";
-import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
+// Servicios: claves home.title<n> / home.text<n> y la foto de cada uno
+const SERVICES = [1, 2, 3, 4, 5, 6] as const;
 
 export const Home = () => {
-
   const { t } = useTranslation();
-  const h1 = t("home.main")
-
-  const extractInstagramPostId = (url: string): string | null => {
-    try {
-      const match = url.match(/instagram\.com\/(?:p|reel)\/([^/?#]+)/);
-      return match ? match[1] : null;
-    } catch {
-      return null;
-    }
-  };
-
-  const [igPostIds, setIgPostIds] = useState<string[]>([]);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const res = await fetch(INSTAGRAM_FEED_URL);
-        const json = await res.json();
-
-        if (Array.isArray(json.posts)) {
-          const ids = json.posts
-            .map(extractInstagramPostId)
-            .filter((id: string): id is string => Boolean(id));
-
-          setIgPostIds(ids);
-        }
-      } catch (err) {
-        console.error("Failed to load Instagram posts", err);
-      }
-    })();
-  }, []);
-
+  const whatsappUrl = useWhatsappUrl();
 
   return (
     <>
       <PageSeo title={t("seo.homeTitle")} description={t("seo.homeDescription")} />
 
-      <main className={styles.mainContainer}>
-        <SeoEntry imgPath={mainImg} content={h1} />
-        <div className={styles.infoContainer}>
-          <div className={styles.item} data-reveal>
-            <img src={home1} className={styles.home1} alt="" />
-            <div className={styles.textContainer1}>
-              <h2 className={styles.itemTitle}>{t("home.title1")}</h2>
-              <h3 className={styles.itemText}>{t("home.text1")}</h3>
+      <main data-ui="new">
+        {/* Héroe */}
+        <Section tone="paper" className="overflow-hidden !pt-12 lg:!pt-20">
+          <LotusPetals className="pointer-events-none absolute -top-6 -left-16 w-96 text-jotu-teal-600/10" />
+          <Container className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="flex flex-col items-start gap-8">
+              <h1 className="font-title text-display font-semibold text-balance text-jotu-navy-950">{t("home.main")}</h1>
+              <div className="flex flex-wrap gap-4">
+                <Button to={PATHS.contact}>{t("card.contactUs")}</Button>
+                <Button href={whatsappUrl} variant="secondary">
+                  {t("card.schedule")}
+                </Button>
+              </div>
             </div>
-          </div>
-          <div className={styles.item} data-reveal>
-            <div className={styles.textContainer2}>
-              <h2 className={styles.itemTitle}>{t("home.title2")}</h2>
-              <h3 className={styles.itemText}>{t("home.text2")}</h3>
+            <div className="overflow-hidden rounded-card shadow-lift">
+              <Picture
+                name="mainImg"
+                alt=""
+                priority
+                sizes="(min-width: 1024px) 560px, 100vw"
+                className="aspect-[4/3] w-full object-cover"
+              />
             </div>
-            <img src={home2} className={styles.home2} alt="" />
-          </div>
-          <div className={styles.item} data-reveal>
-            <img src={home3} className={styles.home1} alt="" />
-            <div className={styles.textContainer1}>
-              <h2 className={styles.itemTitle}>{t("home.title3")}</h2>
-              <h3 className={styles.itemText}>{t("home.text3")}</h3>
-            </div>
-          </div>
-          <div className={styles.item} data-reveal>
-            <div className={styles.textContainer2}>
-              <h2 className={styles.itemTitle}>{t("home.title4")}</h2>
-              <h3 className={styles.itemText}>{t("home.text4")}</h3>
-            </div>
-            <img src={home4} className={styles.home2} alt="" />
-          </div>
-          <div className={styles.item} data-reveal>
-            <img src={home5} className={styles.home1} alt="" />
-            <div className={styles.textContainer1}>
-              <h2 className={styles.itemTitle}>{t("home.title5")}</h2>
-              <h3 className={styles.itemText}>{t("home.text5")}</h3>
-            </div>
-          </div>
-          <div className={styles.item} data-reveal>
-            <div className={styles.textContainer2}>
-              <h2 className={styles.itemTitle}>{t("home.title6")}</h2>
-              <h3 className={styles.itemText}>{t("home.text6")}</h3>
-            </div>
-            <img src={home6} className={styles.home2} alt="" />
-          </div>
-        </div>
-        {igPostIds.length > 0 && (
-          <div className={styles.post}>
-            <h2>{t("home.invitation")}</h2>
+          </Container>
+        </Section>
 
-            <div className={styles.gridPosts}>
-              {igPostIds.map((id) => (
-                <iframe
-                  key={id}
-                  title={`Instagram post ${id}`}
-                  src={`https://www.instagram.com/p/${id}/embed`}
-                  width="100%"
-                  height="500"
-                  style={{ border: 0, borderRadius: "16px" }}
-                  loading="lazy"
-                />
-              ))}
+        {/* Servicios */}
+        <Section tone="white">
+          <Container>
+            <div data-reveal="up">
+              <SectionHeading title={t("about.h22")} align="center" />
             </div>
-          </div>
-        )}
+            <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+              {SERVICES.map((n, i) => (
+                <li
+                  key={n}
+                  className="flex"
+                  data-reveal="up"
+                  style={{ "--reveal-delay": `${(i % 3) * 100}ms` } as React.CSSProperties}
+                >
+                  <Card as="article" interactive className="flex w-full flex-col overflow-hidden !p-0">
+                    <Picture
+                      name={`home${n}`}
+                      alt=""
+                      sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw"
+                      className="aspect-[3/2] w-full object-cover"
+                    />
+                    <div className="flex flex-col gap-3 p-6 md:p-8">
+                      <h3 className="font-title text-h3 font-semibold text-jotu-navy-950">{t(`home.title${n}`)}</h3>
+                      <p className="text-jotu-ink-muted">{t(`home.text${n}`)}</p>
+                    </div>
+                  </Card>
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </Section>
+
+        <FormsSection />
+        <InstagramFeed />
         <ContactCard />
       </main>
     </>
