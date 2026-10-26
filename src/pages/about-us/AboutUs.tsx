@@ -6,19 +6,19 @@ import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
 import { ContactCard } from "@/components/sections/contactCard/ContactCard";
 
 
-import aboutImg from "../../assets/img/aboutImg.jpg"
-import about1 from "../../assets/img/about1.jpg";
-import about2 from "../../assets/img/about2.jpg";
-import about3 from "../../assets/img/about3.avif";
-import about4 from "../../assets/img/about4.avif";
-import about5 from "../../assets/img/about5.avif";
-import about6 from "../../assets/img/about6.avif";
-import client1 from "../../assets/img/client1.png";
-import client2 from "../../assets/img/client2.png";
-import client3 from "../../assets/img/client3.png";
-import client4 from "../../assets/img/client4.png";
-import client5 from "../../assets/img/client5.png";
-import client6 from "../../assets/img/client6.png";
+import aboutImg from "@/assets/img/aboutImg.jpg"
+import about1 from "@/assets/img/about1.jpg";
+import about2 from "@/assets/img/about2.jpg";
+import about3 from "@/assets/img/about3.avif";
+import about4 from "@/assets/img/about4.avif";
+import about5 from "@/assets/img/about5.avif";
+import about6 from "@/assets/img/about6.avif";
+import client1 from "@/assets/img/client1.png";
+import client2 from "@/assets/img/client2.png";
+import client3 from "@/assets/img/client3.png";
+import client4 from "@/assets/img/client4.png";
+import client5 from "@/assets/img/client5.png";
+import client6 from "@/assets/img/client6.png";
 import styles from './AboutUs.module.css'
 
 type AboutProps = {

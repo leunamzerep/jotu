@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { ContactForm } from "@/components/forms/contactForm/ContactForm";
 import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
 
-import mainImg from "../../assets/img/contactMainImg.jpg";
+import mainImg from "@/assets/img/contactMainImg.jpg";
 import styles from './Contact.module.css'
 
 type ContactProps = { canAnimate: boolean };

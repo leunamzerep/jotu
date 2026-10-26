@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import styles from './PrivacyPolicy.module.css'
 
 import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
-import aboutImg from "../../assets/img/aboutImg.jpg"
+import aboutImg from "@/assets/img/aboutImg.jpg"
 
 type TermsProps = {
   canAnimate: boolean;

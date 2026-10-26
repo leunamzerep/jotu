@@ -4,13 +4,13 @@ import { Helmet } from "react-helmet-async";
 
 import { ContactCard } from "@/components/sections/contactCard/ContactCard";
 
-import mainImg from "../../assets/img/mainImg.jpg";
-import home1 from "../../assets/img/home1.webp";
-import home2 from "../../assets/img/home2.jpg";
-import home3 from "../../assets/img/home3.avif";
-import home4 from "../../assets/img/home4.avif";
-import home5 from "../../assets/img/home5.avif";
-import home6 from "../../assets/img/home6.avif";
+import mainImg from "@/assets/img/mainImg.jpg";
+import home1 from "@/assets/img/home1.webp";
+import home2 from "@/assets/img/home2.jpg";
+import home3 from "@/assets/img/home3.avif";
+import home4 from "@/assets/img/home4.avif";
+import home5 from "@/assets/img/home5.avif";
+import home6 from "@/assets/img/home6.avif";
 
 import styles from "./Home.module.css";
 import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
