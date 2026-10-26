@@ -1,3 +1,5 @@
+# Archivo estático: el dominio está escrito a mano aquí (también vive en
+# SITE_URL de src/config/site.ts). Si cambia el dominio, cámbialo en ambos.
 User-agent: *
 Allow: /
 Sitemap: https://jotusolutions.net/sitemap.xml
