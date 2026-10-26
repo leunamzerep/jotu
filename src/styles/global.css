@@ -1,3 +1,12 @@
+/* TAILWIND 4 completo, con Preflight (estilos base que igualan los navegadores) */
+@import "tailwindcss";
+
+/* No buscar clases en la línea base local (copias del HTML generado) */
+@source not "../../.baseline";
+
+/* Parche temporal para las páginas viejas hasta la Sesión D */
+@import "./legacy.css";
+
 :root {
     /* BRAND COLORS */
     --col1: #121f44;
