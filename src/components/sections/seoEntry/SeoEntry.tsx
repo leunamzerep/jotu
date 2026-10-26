@@ -9,7 +9,7 @@ export const SeoEntry = ({ imgPath, content }: SeoEntryProps) => {
 
   return (
     <div className={styles.titleContainer} data-reveal>
-      <img src={imgPath} className={styles.mainImg} />
+      <img src={imgPath} className={styles.mainImg} alt="" />
       <h1 className={styles.mainTitle}>{content}</h1>
     </div>
   )

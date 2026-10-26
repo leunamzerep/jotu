@@ -2,7 +2,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 
-import { FACEBOOK_URL, INSTAGRAM_URL, WHATSAPP_URL } from "@/config/site";
+import { FACEBOOK_URL, INSTAGRAM_URL } from "@/config/site";
+import { useWhatsappUrl } from "@/config/whatsapp";
 import { PATHS } from "@/config/paths";
 import logo from "@/assets/img/JoTu_icono_color.png";
 import styles from './Footer.module.css'
@@ -10,6 +11,7 @@ import styles from './Footer.module.css'
 export const Footer = () => {
 
   const { t } = useTranslation();
+  const whatsappUrl = useWhatsappUrl();
   const mailLink: string = t('footer.mailRedirect')
 
   const [buttonBottom, setButtonBottom] = useState(30);
@@ -53,7 +55,7 @@ export const Footer = () => {
             {t("footer.privacy")}
           </Link>
         </div>
-        <img src={logo} className={styles.logo} />
+        <img src={logo} className={styles.logo} alt={t("alt.logo")} />
         <div className={styles.socialContainer}>
           <div className={styles.medias}>
             <a className={styles.media} style={{ backgroundColor: '#fea501' }} href={INSTAGRAM_URL} target="_blank">
@@ -66,10 +68,10 @@ export const Footer = () => {
               <i className="fa-regular fa-envelope"></i>
             </a>
           </div>
-          <p className={styles.legalAdvice}>© 2025. All rights reserved.</p>
+          <p className={styles.legalAdvice}>{t("footer.copyright", { year: new Date().getFullYear() })}</p>
         </div>
       </div>
-      <a href={WHATSAPP_URL} target="_blank" className={styles.whatsappFloat} style={{ bottom: `${buttonBottom}px` }}>
+      <a href={whatsappUrl} target="_blank" className={styles.whatsappFloat} style={{ bottom: `${buttonBottom}px` }}>
         <i className="fa-brands fa-whatsapp"></i>
       </a>
     </section>

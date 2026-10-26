@@ -1,9 +1,19 @@
+import { useTranslation } from "react-i18next";
+
 import { WHATSAPP_URL } from "./site";
 
 /**
- * Enlace de WhatsApp al mismo número de WHATSAPP_URL (src/config/site.ts), pero
- * con otro mensaje ya escrito. Todavía no se usa: hoy toda la web usa
- * WHATSAPP_URL con su mensaje fijo en español (PENDIENTE: mensaje por idioma).
+ * Enlace de WhatsApp al número de WHATSAPP_URL (src/config/site.ts) con un
+ * mensaje ya escrito.
  */
 export const whatsappWithMessage = (message: string) =>
-  `${WHATSAPP_URL.split("?")[0]}?text=${encodeURIComponent(message)}`;
+  `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
+
+/**
+ * Enlace general de WhatsApp con el mensaje en el idioma visible
+ * (whatsapp.message en es.json / en.json).
+ */
+export const useWhatsappUrl = () => {
+  const { t } = useTranslation();
+  return whatsappWithMessage(t("whatsapp.message"));
+};

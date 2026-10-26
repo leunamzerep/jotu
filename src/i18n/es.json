@@ -2,8 +2,6 @@
     "seo": {
         "homeTitle": "JoTu Solutions LLC",
         "homeDescription": "Ofrecemos servicios de creación de LLC en EE. UU., servicios de bookeeping y asistencia para ITIN. Contáctenos para ayudarle a establecer su negocio de manera correcta sin importar si se encuentra dentro o fuera de los Estados Unidos",
-        "servicesTitle": "Servicios - JoTu Solutions LLC",
-        "servicesDescription": "En Jotu Solutions LLC, ofrecemos Servicios y soluciones integrales para impuestos, creación de empresas y trámites gubernamentales en Estados Unidos.",
         "aboutUsTitle": "Nosotros - JoTu Solutions LLC",
         "aboutUsDescription": "En Jotu Solutions LLC, Nosotros nos especializamos en soluciones fiscales, creación de empresas y trámites ante entidades gubernamentales en Estados Unidos. Nuestro compromiso es ofrecer un servicio profesional y personalizado para satisfacer todas sus necesidades empresariales.",
         "contactTitle": "Contacto - JoTu Solutions LLC",
@@ -15,15 +13,15 @@
     },
     "header": {
         "home": "Inicio",
-        "services": "Servicios",
         "aboutUs": "Nosotros",
         "contact": "Contacto"
     },
     "footer": {
         "legals": "Documentos legales",
-        "privacy": "Politica de Privacidad",
+        "privacy": "Política de Privacidad",
         "terms": "Términos y Condiciones",
-        "mailRedirect": "https://mail.google.com/mail/?view=cm&fs=1&to=info@jotusolutions.net&su=Asesoria&body=Buen%20día,%20Quiero%20más%20información."
+        "mailRedirect": "https://mail.google.com/mail/?view=cm&fs=1&to=info@jotusolutions.net&su=Asesor%C3%ADa&body=Buen%20d%C3%ADa%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n.",
+        "copyright": "© {{year}} JoTu Solutions LLC. Todos los derechos reservados."
     },
     "home": {
         "main": "Soluciones Fiscales y Empresariales en Estados Unidos",
@@ -42,7 +40,7 @@
         "invitation": "Conoce las Últimas Novedades:"
     },
     "card": {
-        "schedule": "Agenda tu Asesoria",
+        "schedule": "Agenda tu Asesoría",
         "contactUs": "Contáctanos"
     },
     "about": {
@@ -52,7 +50,7 @@
         "h21": "Sobre Nosotros",
         "h31": "Nuestro equipo de expertos se dedica a proporcionar un acompañamiento personalizado, asegurando que cada trámite se realice de manera eficiente y oportuna.",
         "h22": "Nuestros servicios",
-        "h32": "En Jotu Solutions LLC, ofrecemos soluciones integrales en impuestos y creación de empresas en Estados Unidos.",
+        "h32": "En JoTu Solutions LLC, ofrecemos soluciones integrales en impuestos y creación de empresas en Estados Unidos.",
         "h23": "Nuestro compromiso",
         "h33": "Estamos comprometidos a ayudar a nuestros clientes a alcanzar sus objetivos. Con nosotros, puede tener la tranquilidad de recibir un servicio de calidad y confiabilidad.",
         "h24": "Nuestra Misión",
@@ -77,15 +75,15 @@
         "warn": "Campo Obligatorio*",
         "mail1": "Estimado/a",
         "mail2": "Hemos recibido tu consulta:",
-        "mail3": "Gracias por contactarnos, -----",
+        "mail3": "Gracias por contactarnos.\nEquipo de JoTu Solutions",
         "ubih21": "Ubicación",
         "ubih31": "Estamos ubicados en Orlando, Florida, brindando soluciones integrales en servicios fiscales, contables y trámites estatales para apoyar a nuestros clientes en cada etapa de su negocio.",
         "ubih22": "Dirección",
-        "ubih32": "2875 S Orange Ave Orlando, FL 32806",
+        "ubih32": "2875 S Orange Ave, Orlando, FL 32806",
         "ubih23": "Horario de Atención",
-        "ubih33": "Lunes a Sábado 9 AM - 5 PM",
+        "ubih33": "Lunes a viernes, 9 AM – 5 PM (hora del Este, ET)",
         "ubih24": "¿Cómo llegar?",
-        "ubih34": "Sigue el mapa a continuación o <1>haz click aquí</1>",
+        "ubih34": "Sigue el mapa a continuación o <1>haz clic aquí</1>",
         "sended": "Solicitud enviada correctamente",
         "processing": "Procesando"
     },
@@ -128,5 +126,17 @@
         "p7": "Usted tiene derecho a solicitar acceso, corrección o eliminación de su información personal. Estas solicitudes pueden realizarse contactándonos en info@jotusolutions.net.",
         "section8": "8. Seguridad de los Datos",
         "p8": "Implementamos medidas administrativas y técnicas razonables para proteger su información personal contra accesos no autorizados o divulgación indebida."
+    },
+    "whatsapp": {
+        "message": "👋 ¡Hola!\nGracias por comunicarte con JoTu Solutions LLC.\n\n🕒 Nuestro horario de atención es:\nLunes a Viernes de 9:00 a.m. a 5:00 p.m. (hora del Este, ET).\n\n✅ En breve, uno de nuestros representantes te responderá.\nMientras tanto, por favor dinos tu nombre y cómo podemos ayudarte.\n\n📌 ¡Gracias por elegir a JoTu Solutions LLC"
+    },
+    "notFound": {
+        "title": "Página no encontrada",
+        "description": "La página que buscas no existe o cambió de dirección.",
+        "cta": "Ir al inicio"
+    },
+    "alt": {
+        "logo": "Logo de JoTu Solutions",
+        "client": "Logo de {{name}}"
     }
 }

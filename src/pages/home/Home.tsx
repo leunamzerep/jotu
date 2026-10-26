@@ -66,7 +66,7 @@ export const Home = () => {
         <SeoEntry imgPath={mainImg} content={h1} />
         <div className={styles.infoContainer}>
           <div className={styles.item} data-reveal>
-            <img src={home1} className={styles.home1} />
+            <img src={home1} className={styles.home1} alt="" />
             <div className={styles.textContainer1}>
               <h2 className={styles.itemTitle}>{t("home.title1")}</h2>
               <h3 className={styles.itemText}>{t("home.text1")}</h3>
@@ -77,10 +77,10 @@ export const Home = () => {
               <h2 className={styles.itemTitle}>{t("home.title2")}</h2>
               <h3 className={styles.itemText}>{t("home.text2")}</h3>
             </div>
-            <img src={home2} className={styles.home2} />
+            <img src={home2} className={styles.home2} alt="" />
           </div>
           <div className={styles.item} data-reveal>
-            <img src={home3} className={styles.home1} />
+            <img src={home3} className={styles.home1} alt="" />
             <div className={styles.textContainer1}>
               <h2 className={styles.itemTitle}>{t("home.title3")}</h2>
               <h3 className={styles.itemText}>{t("home.text3")}</h3>
@@ -91,10 +91,10 @@ export const Home = () => {
               <h2 className={styles.itemTitle}>{t("home.title4")}</h2>
               <h3 className={styles.itemText}>{t("home.text4")}</h3>
             </div>
-            <img src={home4} className={styles.home2} />
+            <img src={home4} className={styles.home2} alt="" />
           </div>
           <div className={styles.item} data-reveal>
-            <img src={home5} className={styles.home1} />
+            <img src={home5} className={styles.home1} alt="" />
             <div className={styles.textContainer1}>
               <h2 className={styles.itemTitle}>{t("home.title5")}</h2>
               <h3 className={styles.itemText}>{t("home.text5")}</h3>
@@ -105,7 +105,7 @@ export const Home = () => {
               <h2 className={styles.itemTitle}>{t("home.title6")}</h2>
               <h3 className={styles.itemText}>{t("home.text6")}</h3>
             </div>
-            <img src={home6} className={styles.home2} />
+            <img src={home6} className={styles.home2} alt="" />
           </div>
         </div>
         {igPostIds.length > 0 && (

@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <section>
       <div className={styles.header}>
-        <img src={logo} className={styles.logo} />
+        <img src={logo} className={styles.logo} alt={t("alt.logo")} />
         <div className={styles.optionsContainer}>
           <Link to={PATHS.home} className={styles.option}>{t('header.home')}</Link>
           <Link to={PATHS.aboutUs} className={styles.option}>{t('header.aboutUs')}</Link>

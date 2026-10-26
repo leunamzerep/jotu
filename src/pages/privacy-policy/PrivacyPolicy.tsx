@@ -9,7 +9,7 @@ import aboutImg from "@/assets/img/aboutImg.jpg"
 export const PrivacyPolicy = () => {
 
   const { t } = useTranslation();
-  const h1 = t('terms.h1')
+  const h1 = t('privacy.h1')
 
   return (
     <>
