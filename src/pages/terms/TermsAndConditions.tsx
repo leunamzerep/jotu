@@ -1,42 +1,9 @@
 import { useTranslation } from "react-i18next";
-import { PageSeo } from "@/components/seo/PageSeo";
 
-import styles from './TermsAndConditions.module.css'
-import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
-import aboutImg from "@/assets/img/aboutImg.jpg"
+import { LegalPage } from "@/components/sections/legal/LegalPage";
 
 export const TermsAndConditions = () => {
-
   const { t } = useTranslation();
-  const h1 = t('terms.h1')
 
-  return (
-    <>
-      <PageSeo title={t("seo.termsTitle")} description={t("seo.termsDescription")} />
-
-      <main>
-        <SeoEntry imgPath={aboutImg} content={h1} />
-        <div className={styles.main}>
-          <h2>{t('terms.section1')}</h2>
-          <p>{t('terms.p1')}</p>
-          <h2>{t('terms.section2')}</h2>
-          <p>{t('terms.p2')}</p>
-          <h2>{t('terms.section3')}</h2>
-          <p>{t('terms.p3')}</p>
-          <h2>{t('terms.section4')}</h2>
-          <p>{t('terms.p4')}</p>
-          <h2>{t('terms.section5')}</h2>
-          <p>{t('terms.p5')}</p>
-          <h2>{t('terms.section6')}</h2>
-          <p>{t('terms.p6')}</p>
-          <h2>{t('terms.section7')}</h2>
-          <p>{t('terms.p7')}</p>
-          <h2>{t('terms.section8')}</h2>
-          <p>{t('terms.p8')}</p>
-          <h2>{t('terms.section9')}</h2>
-          <p>{t('terms.p9')}</p>
-        </div>
-      </main>
-    </>
-  );
+  return <LegalPage prefix="terms" sections={9} seoTitle={t("seo.termsTitle")} seoDescription={t("seo.termsDescription")} />;
 };
