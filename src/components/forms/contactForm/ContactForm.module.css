@@ -1,3 +1,8 @@
+/* PARCHE TEMPORAL (Sesión C, hasta la D): las reglas de etiquetas sin clase
+   (h2, h3, label, input, textarea) llevan :where(main) delante para no afectar
+   al Header ni al Footer nuevos. :where() no suma especificidad: en las páginas
+   todo queda igual que antes. */
+
 .displayContainer {
   display: flex;
   justify-content: start;
@@ -21,20 +26,20 @@
   margin: 0;
 }
 
-label {
+:where(main) label {
   display: flex;
   flex-direction: row;
   gap: 6px;
   padding: 0px;
 }
 
-label p {
+:where(main) label p {
   font-size: 14px;
   margin: 24px 0 8px 0;
 }
 
-input,
-textarea {
+:where(main) input,
+:where(main) textarea {
   padding: 8px 10px;
   border-radius: 6px;
   font-size: 14px;
@@ -100,13 +105,13 @@ textarea {
     font-size: 19px;
   }
 
-  label p {
+  :where(main) label p {
     font-size: 13px;
     margin: 18px 0 6px 0;
   }
 
-  input,
-  textarea {
+  :where(main) input,
+  :where(main) textarea {
     font-size: 12px;
   }
 
