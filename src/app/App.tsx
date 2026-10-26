@@ -4,12 +4,12 @@ import { RouterProvider, Outlet, createBrowserRouter } from "react-router-dom";
 
 import { PrerenderReady } from "./PrerenderReady";
 
-import { Header } from "./header/Header";
-import { Footer } from "./footer/Footer";
-import { SplashScreen } from "./components/splashScreen/SplashScreen";
+import { Header } from "@/header/Header";
+import { Footer } from "@/footer/Footer";
+import { SplashScreen } from "@/components/splashScreen/SplashScreen";
 import { createServerRoutes } from "./routes.ssr";
 
-import "./assets/css/app.css";
+import "@/assets/css/app.css";
 
 const Layout = () => (
   <>

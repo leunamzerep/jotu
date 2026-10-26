@@ -1,6 +1,6 @@
 import type { RouteObject } from "react-router-dom";
 import { routes } from "./routes";
-import { PageTransition } from "./components/PageTransition";
+import { PageTransition } from "@/components/PageTransition";
 import { PageWrapper } from "./PageWrapper";
 
 export const createServerRoutes = (canAnimate: boolean): RouteObject[] =>
