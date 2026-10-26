@@ -3,6 +3,7 @@ import { useTranslation, Trans } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { ContactForm } from "@/components/forms/contactForm/ContactForm";
 import { SeoEntry } from "@/components/sections/seoEntry/SeoEntry";
+import { MAPS_DIRECTIONS_URL, MAPS_EMBED_URL } from "@/config/site";
 
 import mainImg from "@/assets/img/contactMainImg.jpg";
 import styles from './Contact.module.css'
@@ -51,7 +52,7 @@ export const Contact = ({ canAnimate }: ContactProps) => {
                   1: (
                     <a
                       className={styles.inlineLink}
-                      href="https://www.google.com/maps/dir//2875+S+Orange+Ave+Orlando,+FL+32806+EE.+UU./@28.509644,-81.3734382,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88e77b71f8a223ed:0x3718d2730d0435af!2m2!1d-81.3734382!2d28.509644?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                      href={MAPS_DIRECTIONS_URL}
                       target="_blank"
                       rel="noreferrer"
                     />
@@ -64,7 +65,7 @@ export const Contact = ({ canAnimate }: ContactProps) => {
         <div className={`${styles.mapContainer} ${animate ? styles.appear : ''}`}>
           <iframe
             title="Office location"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112192.0039618475!2d-81.373438!3d28.509644!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77b71f8a223ed%3A0x3718d2730d0435af!2s2875%20S%20Orange%20Ave%2C%20Orlando%2C%20FL%2032806!5e0!3m2!1ses-419!2sus!4v1765601806615!5m2!1ses-419!2sus"
+            src={MAPS_EMBED_URL}
             width="100%"
             height="300"
             loading="lazy"

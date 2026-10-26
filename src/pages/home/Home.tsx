@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 
 import { ContactCard } from "@/components/sections/contactCard/ContactCard";
+import { INSTAGRAM_FEED_URL } from "@/config/site";
 
 import mainImg from "@/assets/img/mainImg.jpg";
 import home1 from "@/assets/img/home1.webp";
@@ -22,7 +23,6 @@ export const Home = ({ canAnimate }: HomeProps) => {
   const { t } = useTranslation();
   const h1 = t("home.main")
   const [animate, setAnimate] = useState(false);
-  const getUrl = 'https://script.google.com/macros/s/AKfycbxUVbLkNodz54cSxQmlwy18-dad-k82RQG2niRG4oH9RIA5Wov_SempUyIxb23OA0M8Rg/exec'
 
   const extractInstagramPostId = (url: string): string | null => {
     try {
@@ -44,7 +44,7 @@ export const Home = ({ canAnimate }: HomeProps) => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch(getUrl);
+        const res = await fetch(INSTAGRAM_FEED_URL);
         const json = await res.json();
 
         if (Array.isArray(json.posts)) {
@@ -58,7 +58,7 @@ export const Home = ({ canAnimate }: HomeProps) => {
         console.error("Failed to load Instagram posts", err);
       }
     })();
-  }, [getUrl]);
+  }, []);
 
 
   return (

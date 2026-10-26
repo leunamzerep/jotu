@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { CONTACT_WORKER_URL } from "@/config/site";
 import styles from './ContactForm.module.css'
 
 type form = { canAnimate: boolean }
@@ -65,7 +66,7 @@ export const ContactForm = ({ canAnimate }: form) => {
     );
 
     try {
-      const res = await fetch("https://contact-jotu.zumiasolutions.workers.dev/api/contacto", {
+      const res = await fetch(CONTACT_WORKER_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
