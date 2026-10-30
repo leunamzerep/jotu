@@ -91,18 +91,10 @@ export const AboutUs = () => {
         {/* Fundadores */}
         <Section tone="mist" className="overflow-hidden">
           <LotusPetals className="pointer-events-none absolute -right-20 -bottom-6 w-[28rem] text-jotu-teal-600/10" />
-          <Container className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
-            <div className="mx-auto w-full max-w-sm overflow-hidden rounded-card shadow-lift lg:mx-0 lg:justify-self-end" data-reveal="up">
-              <Picture
-                name="fundadores"
-                alt={t("alt.founders")}
-                sizes="(min-width: 1024px) 384px, 90vw"
-                className="aspect-[4/5] w-full object-cover object-[50%_35%]"
-              />
-            </div>
-            <div className="flex flex-col gap-8" data-reveal="up" style={delay(120)}>
-              <SectionHeading title={t("founders.title")} />
-              <ul className="flex flex-col divide-y divide-jotu-line border-y border-jotu-line">
+          <Container className="relative">
+            <div className="mx-auto flex max-w-xl flex-col gap-8" data-reveal="up">
+              <SectionHeading title={t("founders.title")} align="center" />
+              <ul className="flex flex-col divide-y divide-jotu-line border-y border-jotu-line text-center">
                 <li className="py-5 font-title text-h3 text-jotu-navy-950">{t("founders.name1")}</li>
                 <li className="py-5 font-title text-h3 text-jotu-navy-950">{t("founders.name2")}</li>
               </ul>
