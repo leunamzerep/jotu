@@ -23,7 +23,8 @@
         "privacy": "Privacy Policy",
         "terms": "Terms and Conditions",
         "mailRedirect": "https://mail.google.com/mail/?view=cm&fs=1&to=info@jotusolutions.net&su=Consulting&body=Hi%2C%20I%20would%20like%20more%20information.",
-        "copyright": "© {{year}} JoTu Solutions LLC. All rights reserved."
+        "copyright": "© {{year}} JoTu Solutions LLC. All rights reserved.",
+        "credit": "Designed and Implemented by:"
     },
     "home": {
         "main": "Tax and Business Solutions in the United States",

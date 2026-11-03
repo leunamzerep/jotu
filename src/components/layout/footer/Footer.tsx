@@ -93,9 +93,16 @@ export const Footer = () => {
       </div>
 
       <div className="relative border-t border-jotu-line">
-        <p className="container-site py-6 text-xs text-jotu-ink-muted">
-          {t("footer.copyright", { year: new Date().getFullYear() })}
-        </p>
+        <div className="container-site flex flex-col gap-2 py-6 text-xs text-jotu-ink-muted sm:flex-row sm:justify-between">
+          <p>{t("footer.copyright", { year: new Date().getFullYear() })}</p>
+          {/* Crédito del diseño y la implementación del sitio */}
+          <p>
+            {t("footer.credit")}{" "}
+            <a href="https://zumiasolutions.xyz" target="_blank" rel="noopener noreferrer" className={link}>
+              Zumia Solutions
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

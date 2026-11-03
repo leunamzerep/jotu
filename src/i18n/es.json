@@ -23,7 +23,8 @@
         "privacy": "Política de Privacidad",
         "terms": "Términos y Condiciones",
         "mailRedirect": "https://mail.google.com/mail/?view=cm&fs=1&to=info@jotusolutions.net&su=Asesor%C3%ADa&body=Buen%20d%C3%ADa%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n.",
-        "copyright": "© {{year}} JoTu Solutions LLC. Todos los derechos reservados."
+        "copyright": "© {{year}} JoTu Solutions LLC. Todos los derechos reservados.",
+        "credit": "Diseñado e Implementado por:"
     },
     "home": {
         "main": "Soluciones Fiscales y Empresariales en Estados Unidos",
