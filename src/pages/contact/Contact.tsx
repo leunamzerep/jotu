@@ -42,32 +42,33 @@ export const Contact = () => {
             <h1 id="contact-title" className="max-w-3xl font-title text-h1 font-semibold text-balance text-jotu-navy-950">
               {t("contact.main")}
             </h1>
-            {/* Escritorio: agenda a la izquierda y foto a la derecha. Celular: agenda arriba y foto debajo.
+            {/* Celular: título, agenda, aviso y foto, uno debajo de otro y del mismo ancho.
+                Escritorio: la foto va a la derecha de la agenda, con su mismo alto (fila 2 de la cuadrícula).
                 Alto del iframe medido a mano para que el calendario de Google no tenga scroll interno */}
-            <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.7fr_1fr] lg:gap-12">
-              <div className="flex flex-col gap-4">
+            <div className="grid grid-cols-1 gap-x-12 gap-y-4 lg:grid-cols-[1.7fr_1fr]">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
                 <h2 className="font-title text-h3 font-semibold text-jotu-navy-950">{t("card.schedule")}</h2>
-                <div className="overflow-hidden rounded-card border border-jotu-line bg-jotu-white shadow-soft">
-                  <iframe
-                    title={t("booking.iframeTitle")}
-                    src={BOOKING_URL}
-                    loading="lazy"
-                    className="block h-[1120px] w-full border-0 md:h-[720px] lg:h-[640px]"
-                  />
-                </div>
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={`self-start ${link}`}>
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={`text-sm ${link}`}>
                   {t("booking.openNewTab")}
                 </a>
-                <p className="text-sm text-jotu-ink-muted">
-                  <Trans i18nKey="booking.privacyNote" components={{ 1: <Link to={PATHS.privacy} className={link} /> }} />
-                </p>
               </div>
-              <div className="overflow-hidden rounded-card shadow-lift">
+              <div className="overflow-hidden rounded-card border border-jotu-line bg-jotu-white shadow-soft lg:col-start-1 lg:row-start-2">
+                <iframe
+                  title={t("booking.iframeTitle")}
+                  src={BOOKING_URL}
+                  loading="lazy"
+                  className="block h-[1120px] w-full border-0 md:h-[720px] lg:h-[640px]"
+                />
+              </div>
+              <p className="text-sm text-jotu-ink-muted lg:col-start-1 lg:row-start-3">
+                <Trans i18nKey="booking.privacyNote" components={{ 1: <Link to={PATHS.privacy} className={link} /> }} />
+              </p>
+              <div className="mt-4 overflow-hidden rounded-card shadow-lift lg:col-start-2 lg:row-start-2 lg:mt-0 lg:*:h-full">
                 <Picture
                   name="contactMainImg"
                   alt=""
                   sizes="(min-width: 1024px) 400px, 100vw"
-                  className="aspect-[4/3] w-full object-cover md:aspect-[16/9] lg:aspect-[4/5]"
+                  className="aspect-[4/3] w-full object-cover md:aspect-[16/9] lg:aspect-auto lg:h-full"
                 />
               </div>
             </div>
