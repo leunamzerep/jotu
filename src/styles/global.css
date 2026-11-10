@@ -185,6 +185,13 @@ html {
     background-color: var(--color-jotu-white);
 }
 
+/* Contacto (tiene #agenda): el botón "Agenda tu Asesoría" baja suave a la
+   agenda aunque ya se esté en la página. Solo aquí, para que el cambio de
+   página no "resbale". Con "reducir movimiento" la regla de arriba lo apaga. */
+html:has(#agenda) {
+    scroll-behavior: smooth;
+}
+
 button,
 a {
     cursor: pointer;

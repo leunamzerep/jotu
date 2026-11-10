@@ -1,5 +1,6 @@
-import type { CSSProperties } from "react";
+import { useEffect, type CSSProperties } from "react";
 import { useTranslation, Trans } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 
 import { PageSeo } from "@/components/seo/PageSeo";
 import { ContactForm } from "@/components/forms/contactForm/ContactForm";
@@ -9,7 +10,8 @@ import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon } from "@/components/ui/icon
 import { Picture } from "@/components/ui/Picture";
 import { Container, Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { EMAIL, MAPS_DIRECTIONS_URL, MAPS_EMBED_URL, PHONE_DISPLAY, PHONE_TEL } from "@/config/site";
+import { BOOKING_ID, PATHS } from "@/config/paths";
+import { BOOKING_URL, EMAIL, MAPS_DIRECTIONS_URL, MAPS_EMBED_URL, PHONE_DISPLAY, PHONE_TEL } from "@/config/site";
 
 const link =
   "rounded-sm font-semibold text-jotu-navy-950 underline decoration-jotu-teal-600/40 underline-offset-4 " +
@@ -18,25 +20,56 @@ const link =
 export const Contact = () => {
   const { t } = useTranslation();
   const mailLink: string = t("footer.mailRedirect");
+  const { hash, key } = useLocation();
+
+  // Con /contact/#agenda baja a la agenda: suave, o al instante si el sistema
+  // pide "reducir movimiento". Se repite si se vuelve a pulsar el botón.
+  useEffect(() => {
+    if (hash !== `#${BOOKING_ID}`) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.getElementById(BOOKING_ID)?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+  }, [hash, key]);
 
   return (
     <>
       <PageSeo title={t("seo.contactTitle")} description={t("seo.contactDescription")} />
 
       <main data-ui="new">
-        {/* Héroe */}
-        <Section tone="paper" className="overflow-hidden !pt-12 lg:!pt-20">
+        {/* Héroe: título y agenda de citas (destino de los botones "Agenda tu Asesoría") */}
+        <Section id={BOOKING_ID} tone="paper" labelledBy="contact-title" className="scroll-mt-18 overflow-hidden !pt-12 lg:!pt-20">
           <LotusPetals className="pointer-events-none absolute -top-6 -left-16 w-96 text-jotu-teal-600/10" />
-          <Container className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            <h1 className="font-title text-h1 font-semibold text-balance text-jotu-navy-950">{t("contact.main")}</h1>
-            <div className="overflow-hidden rounded-card shadow-lift">
-              <Picture
-                name="contactMainImg"
-                alt=""
-                priority
-                sizes="(min-width: 1024px) 560px, 100vw"
-                className="aspect-[4/3] w-full object-cover"
-              />
+          <Container className="relative flex flex-col gap-10 lg:gap-12">
+            <h1 id="contact-title" className="max-w-3xl font-title text-h1 font-semibold text-balance text-jotu-navy-950">
+              {t("contact.main")}
+            </h1>
+            {/* Escritorio: agenda a la izquierda y foto a la derecha. Celular: agenda arriba y foto debajo.
+                Alto del iframe medido a mano para que el calendario de Google no tenga scroll interno */}
+            <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.7fr_1fr] lg:gap-12">
+              <div className="flex flex-col gap-4">
+                <h2 className="font-title text-h3 font-semibold text-jotu-navy-950">{t("card.schedule")}</h2>
+                <div className="overflow-hidden rounded-card border border-jotu-line bg-jotu-white shadow-soft">
+                  <iframe
+                    title={t("booking.iframeTitle")}
+                    src={BOOKING_URL}
+                    loading="lazy"
+                    className="block h-[1120px] w-full border-0 md:h-[720px] lg:h-[640px]"
+                  />
+                </div>
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={`self-start ${link}`}>
+                  {t("booking.openNewTab")}
+                </a>
+                <p className="text-sm text-jotu-ink-muted">
+                  <Trans i18nKey="booking.privacyNote" components={{ 1: <Link to={PATHS.privacy} className={link} /> }} />
+                </p>
+              </div>
+              <div className="overflow-hidden rounded-card shadow-lift">
+                <Picture
+                  name="contactMainImg"
+                  alt=""
+                  sizes="(min-width: 1024px) 400px, 100vw"
+                  className="aspect-[4/3] w-full object-cover md:aspect-[16/9] lg:aspect-[4/5]"
+                />
+              </div>
             </div>
           </Container>
         </Section>
