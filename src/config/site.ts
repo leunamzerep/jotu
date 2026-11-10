@@ -49,6 +49,15 @@ export const MAPS_EMBED_URL =
  * El texto visible sale de i18n (contact.ubih33 y whatsapp.message).
  */
 
+/**
+ * Agenda de citas (Google Calendar, "appointment schedules") que se muestra en
+ * Contacto, sección #agenda: iframe y enlace "abrir en otra pestaña".
+ * TODO: URL de PRUEBA del calendario personal de Manuel. Cambiarla por la
+ * definitiva de JoTu antes de publicar en producción.
+ */
+export const BOOKING_URL =
+  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1NOpk4W-CPlFdTvzy8fAIzGlQBpv80h7_lS3bCDPEKV9fVANa2UefdxXrtOvW_ZSQpGD8mvJqZ?gv=true";
+
 /** Redes sociales. */
 export const INSTAGRAM_URL = "https://www.instagram.com/jotusolutions";
 export const FACEBOOK_URL = "https://www.facebook.com/people/JOTU-Solutions-LLC/61576996550658";

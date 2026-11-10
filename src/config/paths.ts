@@ -11,3 +11,7 @@ export const PATHS = {
   terms: "/terms-and-conditions/",
   privacy: "/privacy-policy/",
 } as const;
+
+/** Sección de la agenda de citas en Contacto (botones "Agenda tu Asesoría"). */
+export const BOOKING_ID = "agenda";
+export const AGENDA_PATH = `${PATHS.contact}#${BOOKING_ID}`;

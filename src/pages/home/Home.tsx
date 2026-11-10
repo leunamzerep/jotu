@@ -10,15 +10,13 @@ import { LotusPetals } from "@/components/ui/Decor";
 import { Picture } from "@/components/ui/Picture";
 import { Container, Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { PATHS } from "@/config/paths";
-import { useWhatsappUrl } from "@/config/whatsapp";
+import { AGENDA_PATH, PATHS } from "@/config/paths";
 
 // Servicios: claves home.title<n> / home.text<n> y la foto de cada uno
 const SERVICES = [1, 2, 3, 4, 5, 6] as const;
 
 export const Home = () => {
   const { t } = useTranslation();
-  const whatsappUrl = useWhatsappUrl();
 
   return (
     <>
@@ -33,7 +31,7 @@ export const Home = () => {
               <h1 className="font-title text-display font-semibold text-balance text-jotu-navy-950">{t("home.main")}</h1>
               <div className="flex flex-wrap gap-4">
                 <Button to={PATHS.contact}>{t("card.contactUs")}</Button>
-                <Button href={whatsappUrl} variant="secondary">
+                <Button to={AGENDA_PATH} variant="secondary">
                   {t("card.schedule")}
                 </Button>
               </div>

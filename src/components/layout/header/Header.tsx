@@ -6,7 +6,7 @@ import { LanguageSwitch } from "@/components/langSwitch/LangSwitch";
 import { Button } from "@/components/ui/Button";
 import { CloseIcon, MenuIcon } from "@/components/ui/icons";
 import { cx } from "@/components/ui/cx";
-import { PATHS } from "@/config/paths";
+import { AGENDA_PATH, PATHS } from "@/config/paths";
 import logo from "@/assets/img/JoTu_color_1.png";
 import { NAV_LINKS, isCurrentPath } from "../navLinks";
 
@@ -118,7 +118,7 @@ export const Header = () => {
           <div className="flex items-center gap-3 lg:gap-5">
             <LanguageSwitch />
             <div className="hidden lg:block">
-              <Button to={PATHS.contact}>{t("card.schedule")}</Button>
+              <Button to={AGENDA_PATH}>{t("card.schedule")}</Button>
             </div>
             <button
               ref={toggleRef}
@@ -174,7 +174,7 @@ export const Header = () => {
               );
             })}
           </ul>
-          <Button to={PATHS.contact} className="w-full py-4" onClick={() => setOpen(false)}>
+          <Button to={AGENDA_PATH} className="w-full py-4" onClick={() => setOpen(false)}>
             {t("card.schedule")}
           </Button>
         </nav>
