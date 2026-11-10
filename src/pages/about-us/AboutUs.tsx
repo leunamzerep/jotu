@@ -29,6 +29,7 @@ const CLIENTS = [
   { photo: "client4", name: "Curleys Bagels", href: "https://www.instagram.com/curleys_bagels?igsh=MWhiOXJod2lrNTkzNA==" },
   { photo: "client5", name: "The Lowery Bar & Kitchen", href: "https://www.instagram.com/thelowerybar?igsh=cHl1N2g0N2RveDRo" },
   { photo: "client6", name: "Elpis NYC", href: "https://www.instagram.com/elpisnyc?igsh=MWRhbGVmczJhY3p6cA==" },
+  { photo: "client7", name: "Caffeto International Trader", href: "https://www.instagram.com/caffeto_intl" },
 ] as const;
 
 const delay = (ms: number) => ({ "--reveal-delay": `${ms}ms` }) as CSSProperties;
@@ -108,9 +109,15 @@ export const AboutUs = () => {
             <div data-reveal="up">
               <SectionHeading title={t("about.clients")} align="center" />
             </div>
-            <ul className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-3 lg:max-w-none lg:grid-cols-6 lg:gap-6">
+            {/* 7 marcas: en una fila en PC; si no caben, 4 arriba y 3 abajo centradas (flex-wrap + justify-center) */}
+            <ul className="mx-auto mt-12 flex max-w-4xl flex-wrap justify-center gap-3 sm:gap-4 lg:max-w-none lg:flex-nowrap lg:gap-6">
               {CLIENTS.map(({ photo, name, href }, i) => (
-                <li key={photo} data-reveal="up" style={delay((i % 3) * 100)}>
+                <li
+                  key={photo}
+                  data-reveal="up"
+                  style={delay((i % 4) * 100)}
+                  className="w-[calc((100%-3*0.75rem)/4)] sm:w-[calc((100%-3*1rem)/4)] lg:w-auto lg:flex-1"
+                >
                   <a
                     href={href}
                     target="_blank"
@@ -118,14 +125,14 @@ export const AboutUs = () => {
                     aria-label={`${t("about.from")} ${name}`}
                     title={`${t("about.from")} ${name}`}
                     className={cx(
-                      "flex aspect-square items-center justify-center rounded-card border border-jotu-line bg-jotu-white p-5 shadow-soft",
+                      "flex aspect-square items-center justify-center rounded-card border border-jotu-line bg-jotu-white p-2 shadow-soft sm:p-4 lg:p-5",
                       "transition-[translate,box-shadow] duration-300 motion-safe:[@media(hover:hover)]:hover:-translate-y-1 [@media(hover:hover)]:hover:shadow-lift",
                     )}
                   >
                     <Picture
                       name={photo}
                       alt={t("alt.client", { name })}
-                      sizes="(min-width: 1024px) 160px, 40vw"
+                      sizes="(min-width: 1024px) 160px, 25vw"
                       className="size-full object-contain"
                     />
                   </a>
