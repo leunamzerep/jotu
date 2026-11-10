@@ -65,6 +65,11 @@
         "h27": "Our Approach",
         "h37": "We work closely with our clients to build long-term relationships based on trust, transparency, and personalized support."
     },
+    "booking": {
+        "iframeTitle": "Appointment scheduling calendar for JoTu Solutions",
+        "openNewTab": "Open schedule in a new tab",
+        "privacyNote": "By scheduling, you agree to our <1>Privacy Policy</1>."
+    },
     "contact": {
         "main": "Contact Us. Request more information and let's work together.",
         "invitation": "Ask a Question or Schedule Your Consultation",

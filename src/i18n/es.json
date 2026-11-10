@@ -65,6 +65,11 @@
         "h27": "Nuestro Enfoque",
         "h37": "Trabajamos de la mano con nuestros clientes para construir relaciones duraderas basadas en confianza, transparencia y atención personalizada."
     },
+    "booking": {
+        "iframeTitle": "Calendario para agendar una cita con JoTu Solutions",
+        "openNewTab": "Abrir agenda en otra pestaña",
+        "privacyNote": "Al agendar aceptas nuestra <1>Política de Privacidad</1>."
+    },
     "contact": {
         "main": "Contáctanos. Solicita más información y trabajemos juntos",
         "invitation": "Cuéntanos tus dudas o agenda tu asesoría",
