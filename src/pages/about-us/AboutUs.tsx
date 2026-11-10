@@ -63,6 +63,45 @@ export const AboutUs = () => {
           </Container>
         </Section>
 
+        {/* Clientes */}
+        <Section tone="mist">
+          <Container>
+            <div data-reveal="up">
+              <SectionHeading title={t("about.clients")} align="center" />
+            </div>
+            {/* 7 marcas: en una fila en PC; si no caben, 4 arriba y 3 abajo centradas (flex-wrap + justify-center) */}
+            <ul className="mx-auto mt-12 flex max-w-4xl flex-wrap justify-center gap-3 sm:gap-4 lg:max-w-none lg:flex-nowrap lg:gap-6">
+              {CLIENTS.map(({ photo, name, href }, i) => (
+                <li
+                  key={photo}
+                  data-reveal="up"
+                  style={delay((i % 4) * 100)}
+                  className="w-[calc((100%-3*0.75rem)/4)] sm:w-[calc((100%-3*1rem)/4)] lg:w-auto lg:flex-1"
+                >
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${t("about.from")} ${name}`}
+                    title={`${t("about.from")} ${name}`}
+                    className={cx(
+                      "flex aspect-square items-center justify-center rounded-card border border-jotu-line bg-jotu-white p-2 shadow-soft sm:p-4 lg:p-5",
+                      "transition-[translate,box-shadow] duration-300 motion-safe:[@media(hover:hover)]:hover:-translate-y-1 [@media(hover:hover)]:hover:shadow-lift",
+                    )}
+                  >
+                    <Picture
+                      name={photo}
+                      alt={t("alt.client", { name })}
+                      sizes="(min-width: 1024px) 160px, 25vw"
+                      className="size-full object-contain"
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </Section>
+
         {/* Seis bloques: foto y texto, alternados */}
         <Section tone="white">
           <Container className="flex flex-col gap-16 lg:gap-24">
@@ -100,45 +139,6 @@ export const AboutUs = () => {
                 <li className="py-5 font-title text-h3 text-jotu-navy-950">{t("founders.name2")}</li>
               </ul>
             </div>
-          </Container>
-        </Section>
-
-        {/* Clientes */}
-        <Section tone="white">
-          <Container>
-            <div data-reveal="up">
-              <SectionHeading title={t("about.clients")} align="center" />
-            </div>
-            {/* 7 marcas: en una fila en PC; si no caben, 4 arriba y 3 abajo centradas (flex-wrap + justify-center) */}
-            <ul className="mx-auto mt-12 flex max-w-4xl flex-wrap justify-center gap-3 sm:gap-4 lg:max-w-none lg:flex-nowrap lg:gap-6">
-              {CLIENTS.map(({ photo, name, href }, i) => (
-                <li
-                  key={photo}
-                  data-reveal="up"
-                  style={delay((i % 4) * 100)}
-                  className="w-[calc((100%-3*0.75rem)/4)] sm:w-[calc((100%-3*1rem)/4)] lg:w-auto lg:flex-1"
-                >
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${t("about.from")} ${name}`}
-                    title={`${t("about.from")} ${name}`}
-                    className={cx(
-                      "flex aspect-square items-center justify-center rounded-card border border-jotu-line bg-jotu-white p-2 shadow-soft sm:p-4 lg:p-5",
-                      "transition-[translate,box-shadow] duration-300 motion-safe:[@media(hover:hover)]:hover:-translate-y-1 [@media(hover:hover)]:hover:shadow-lift",
-                    )}
-                  >
-                    <Picture
-                      name={photo}
-                      alt={t("alt.client", { name })}
-                      sizes="(min-width: 1024px) 160px, 25vw"
-                      className="size-full object-contain"
-                    />
-                  </a>
-                </li>
-              ))}
-            </ul>
           </Container>
         </Section>
 
