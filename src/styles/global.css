@@ -30,6 +30,7 @@
     --color-jotu-mist: #f3f9fa;           /* NUEVO: turquesa al 8 % sobre blanco */
     --color-jotu-line: #e3e4e9;           /* NUEVO: navy al 12 % sobre blanco (líneas finas) */
     --color-jotu-ink-muted: #4d5773;      /* NUEVO: navy al 75 % sobre blanco (texto secundario, 7.2:1) */
+    --color-jotu-star: #f2b01e;           /* NUEVO: amarillo cálido de las estrellas de reseñas (decorativo) */
 
     /* Marca ajena: verde oscuro de la paleta de WhatsApp (el ícono blanco pasa 3:1; el verde claro no) */
     --color-whatsapp: #128c7e;

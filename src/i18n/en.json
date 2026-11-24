@@ -184,6 +184,17 @@
         },
         "more": "And more solutions"
     },
+    "reviews": {
+        "title": "What our clients say",
+        "note": "Selected reviews from our Google Business Profile",
+        "cardLabel": "Review {{n}} of {{total}}",
+        "stars": "{{rating}} out of 5 stars",
+        "readMore": "Read more",
+        "readLess": "Show less",
+        "prev": "Previous reviews",
+        "next": "Next reviews",
+        "all": "Read all reviews on Google"
+    },
     "founders": {
         "title": "Founders",
         "name1": "Bryan Moreno",

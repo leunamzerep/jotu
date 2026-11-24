@@ -184,6 +184,17 @@
         },
         "more": "Y más soluciones"
     },
+    "reviews": {
+        "title": "Lo que dicen nuestros clientes",
+        "note": "Reseñas seleccionadas de nuestro perfil de Google",
+        "cardLabel": "Reseña {{n}} de {{total}}",
+        "stars": "{{rating}} de 5 estrellas",
+        "readMore": "Leer más",
+        "readLess": "Leer menos",
+        "prev": "Reseñas anteriores",
+        "next": "Reseñas siguientes",
+        "all": "Ver todas las reseñas en Google"
+    },
     "founders": {
         "title": "Fundadores",
         "name1": "Bryan Moreno",

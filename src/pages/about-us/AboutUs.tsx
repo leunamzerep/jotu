@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { PageSeo } from "@/components/seo/PageSeo";
 import { ContactCard } from "@/components/sections/contactCard/ContactCard";
+import { Reviews } from "@/components/sections/reviews/Reviews";
 import { LotusPetals } from "@/components/ui/Decor";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Picture } from "@/components/ui/Picture";
@@ -101,6 +102,9 @@ export const AboutUs = () => {
             </ul>
           </Container>
         </Section>
+
+        {/* Reseñas copiadas a mano (src/data/reviews.ts) */}
+        <Reviews />
 
         {/* Seis bloques: foto y texto, alternados */}
         <Section tone="white">
