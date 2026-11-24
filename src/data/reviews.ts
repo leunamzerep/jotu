@@ -4,6 +4,8 @@
 // signos). Solo se normalizan espacios (dobles → uno, y sin espacio antes de comas).
 // Cada elemento de `text` es un párrafo. Sin foto ni fechas relativas.
 //
+// url: enlace de "Compartir" de cada reseña en Google Maps, verificado abriendo cada uno (autora y texto).
+//
 // rating verificado por Manuel contra Google; no cambiar sin comprobar.
 
 export type ReviewLang = "en" | "es";
@@ -14,6 +16,8 @@ export type Review = {
   author: string;
   /** Idioma original del texto (no se traduce) */
   lang: ReviewLang;
+  /** Enlace oficial a esta reseña en Google Maps (botón Compartir de la reseña) */
+  url: string;
   /** Estrellas en Google (1–5) */
   rating: 5;
   /** Párrafos del texto original */
@@ -25,6 +29,7 @@ const REVIEWS_DATA: Review[] = [
     id: 1,
     author: "Karim Elghannam",
     lang: "en",
+    url: "https://maps.app.goo.gl/cBGa2zr48y3TJ7Jc7",
     rating: 5,
     text: [
       "I usually don’t write reviews, but I genuinely felt compelled to share how great my experience with Jotu Solutions LLC has been.",
@@ -38,6 +43,7 @@ const REVIEWS_DATA: Review[] = [
     id: 2,
     author: "Paula Correa Solano",
     lang: "en",
+    url: "https://maps.app.goo.gl/4cAT3kjQXf9ozSEr5",
     rating: 5,
     text: [
       "Working with the team at Jotu Solutions LLC, especially Cindy Villamarín, has been an outstanding experience. Cindy has been an invaluable resource for our company, always taking the time to address our questions and concerns with professionalism, expertise, and genuine care.",
@@ -49,6 +55,7 @@ const REVIEWS_DATA: Review[] = [
     id: 3,
     author: "anne muldoon",
     lang: "en",
+    url: "https://maps.app.goo.gl/UBK1HuqouikMFoG48",
     rating: 5,
     text: [
       "Excellent Accounting Partner for Small Businesses",
@@ -61,6 +68,7 @@ const REVIEWS_DATA: Review[] = [
     id: 4,
     author: "Monica J Castillo R",
     lang: "es",
+    url: "https://maps.app.goo.gl/jhBUfUfkoXzZndNF9",
     rating: 5,
     text: [
       "Cindy y su compañía Jotu Solutions LLC fueron de gran ayuda para poder poner a andar mi sueño y proyecto de Bienestar, su ayuda fue eficaz y todo resultó muy bien, gracias por tu ayuda 🙏🤍 súper recomendada",
@@ -70,6 +78,7 @@ const REVIEWS_DATA: Review[] = [
     id: 5,
     author: "Adriana Cano",
     lang: "es",
+    url: "https://maps.app.goo.gl/Fqw3wyQUxSFPcT7W8",
     rating: 5,
     text: [
       "Mi experiencia con ustedes ha sido excelente, he recibido varios servicios para mi marca personal y en todos he tenido muy buena experiencia, aquellas personas que necesites hacer gestiones contables o de taxes o temas de sociedades que lo hagan tranquilamente y a demás de forma segura. Muchas gracias de nuevo.",
@@ -79,6 +88,7 @@ const REVIEWS_DATA: Review[] = [
     id: 6,
     author: "kevin llanes",
     lang: "es",
+    url: "https://maps.app.goo.gl/QLnDExKEt1jo7r8M6",
     rating: 5,
     text: [
       "La manera en la que Jotusolutions me orientó con mi declaración de impuestos, informándome acerca de mis beneficios fiscales fue increíble, seguimiento durante todo el proceso, súper recomendado!!",
@@ -88,6 +98,7 @@ const REVIEWS_DATA: Review[] = [
     id: 7,
     author: "Juan Mideros",
     lang: "es",
+    url: "https://maps.app.goo.gl/ia6fZAZXCBiQKnLZ7",
     rating: 5,
     text: [
       "Excelente atención, soy cliente extranjero y estoy muy conforme con su servicio contable en los Estados Unidos, Recomendado 100%",
@@ -97,6 +108,7 @@ const REVIEWS_DATA: Review[] = [
     id: 8,
     author: "Alvaro Narvaez",
     lang: "es",
+    url: "https://maps.app.goo.gl/zhC9GiwrXeyKb9xWA",
     rating: 5,
     text: [
       "Excelente servicio el de Cindy y su equipo, alta proactividad, respuestas oportunas y siempre atentos a uno como cliente. Los recomiendo sin dudarlo!!",
@@ -106,6 +118,7 @@ const REVIEWS_DATA: Review[] = [
     id: 9,
     author: "Daihana Rivero",
     lang: "es",
+    url: "https://maps.app.goo.gl/Szvuw1gUAXmA4fWD6",
     rating: 5,
     text: [
       "Gracias por el gran apoyo y la asesoría constante. Han sido muy profesionales, atentos y amables, lo que nos ha dado mucha confianza en todo el proceso.",
@@ -115,6 +128,7 @@ const REVIEWS_DATA: Review[] = [
     id: 10,
     author: "Elpis NYC",
     lang: "en",
+    url: "https://maps.app.goo.gl/tas3crXKnRwKyPLw9",
     rating: 5,
     text: [
       "Jotu solutions really is the best when it comes to business solutions. They use all the right methods to get your business where it needs to be! I will definitely keep working with their services. Extremely recommended!!",

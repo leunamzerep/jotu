@@ -72,6 +72,8 @@ const ReviewCard = ({ review, index, total }: { review: Review; index: number; t
       aria-label={t("reviews.cardLabel", { n: index + 1, total })}
       className={cx(
         // Todas las tarjetas miden lo mismo (el track las estira); el texto largo hace scroll dentro
+        // "relative": el enlace del autor se estira sobre toda la tarjeta (clic en cualquier parte)
+        "relative",
         "flex shrink-0 snap-start flex-col gap-4 rounded-card border border-jotu-line bg-jotu-white p-6 shadow-soft sm:p-8",
         "basis-full md:basis-[calc((100%-1.25rem)/2)] lg:basis-[calc((100%-2.5rem)/3)]",
       )}
@@ -84,7 +86,17 @@ const ReviewCard = ({ review, index, total }: { review: Review; index: number; t
           ))}
         </span>
       </div>
-      <figcaption className="font-title text-lg font-semibold text-jotu-navy-950">{review.author}</figcaption>
+      <figcaption className="font-title text-lg font-semibold text-jotu-navy-950">
+        <a
+          href={review.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={t("reviews.viewOnGoogle", { author: review.author })}
+          className="rounded-sm after:absolute after:inset-0 after:rounded-card after:content-[''] hover:underline hover:decoration-jotu-teal-600/60 hover:underline-offset-4"
+        >
+          {review.author}
+        </a>
+      </figcaption>
       <blockquote
         ref={bodyRef}
         id={bodyId}
@@ -96,7 +108,7 @@ const ReviewCard = ({ review, index, total }: { review: Review; index: number; t
           // La barra de scroll vive en el padding de la tarjeta (margen negativo + hueco fijo):
           // el ancho del texto es el mismo con o sin scroll, y no se mueve al expandir.
           "-me-3 pe-1 [scrollbar-gutter:stable] [scrollbar-width:thin]",
-          open && lockedHeight ? "flex-none overflow-y-auto overscroll-contain" : "flex-1 overflow-y-auto",
+          open && lockedHeight ? "relative z-10 flex-none overflow-y-auto overscroll-contain" : "flex-1 overflow-y-auto",
         )}
       >
         {shown.map((p, i) => (
@@ -112,7 +124,7 @@ const ReviewCard = ({ review, index, total }: { review: Review; index: number; t
             setLockedHeight(open ? undefined : bodyRef.current?.getBoundingClientRect().height);
             setOpen((o) => !o);
           }}
-          className="self-start rounded-sm text-sm font-semibold text-jotu-teal-600 underline decoration-jotu-teal-600/30 underline-offset-4 hover:decoration-jotu-teal-600"
+          className="relative z-10 self-start rounded-sm text-sm font-semibold text-jotu-teal-600 underline decoration-jotu-teal-600/30 underline-offset-4 hover:decoration-jotu-teal-600"
         >
           {t(open ? "reviews.readLess" : "reviews.readMore")}
         </button>

@@ -191,6 +191,7 @@
         "stars": "{{rating}} out of 5 stars",
         "readMore": "Read more",
         "readLess": "Show less",
+        "viewOnGoogle": "View {{author}}'s review on Google (opens in a new tab)",
         "prev": "Previous reviews",
         "next": "Next reviews",
         "all": "Read all reviews on Google"

@@ -191,6 +191,7 @@
         "stars": "{{rating}} de 5 estrellas",
         "readMore": "Leer más",
         "readLess": "Leer menos",
+        "viewOnGoogle": "Ver la reseña de {{author}} en Google (se abre en una pestaña nueva)",
         "prev": "Reseñas anteriores",
         "next": "Reseñas siguientes",
         "all": "Ver todas las reseñas en Google"
